@@ -94,3 +94,23 @@
   background: #000;
   color: #fff;
 }
+
+.sidebar h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+}
+
+.sidebar h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  left: 50%;
+  bottom: -15px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #DE1616;
+}
