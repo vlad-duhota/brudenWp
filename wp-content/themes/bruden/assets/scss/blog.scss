@@ -75,3 +75,10 @@ $grey: #7F7F7F;
         }
     }
 }
+
+
+.sidebar__container{
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 40px;
+}

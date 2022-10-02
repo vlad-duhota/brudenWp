@@ -57,3 +57,9 @@ $grey: #7F7F7F;
         color: #000000;
     }
 }
+
+.sidebar__container{
+    display: grid;
+    grid-template-columns: auto 260px;
+    gap: 40px;
+}

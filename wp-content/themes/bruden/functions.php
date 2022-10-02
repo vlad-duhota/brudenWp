@@ -135,3 +135,23 @@ add_action( 'after_setup_theme', 'theme_support' );
 function theme_support() {
   register_nav_menu( 'main_menu', 'Main menu' );
 }
+
+
+function true_register_wp_sidebars() {
+ 
+	/* В боковой колонке - первый сайдбар */
+	register_sidebar(
+		array(
+			'id' => 'true_side', // уникальный id
+			'name' => 'Siidebar', // название сайдбара
+			'description' => 'Drag widgets into it to show them on sidebar.', // описание
+			'before_widget' => '<div id="%1$s" class="side-widget %2$s">', // по умолчанию виджеты выводятся <li>-списком
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widget-title">', // по умолчанию заголовки виджетов в <h2>
+			'after_title' => '</h2>'
+		)
+	);
+ 
+}
+ 
+add_action( 'widgets_init', 'true_register_wp_sidebars' );

@@ -10,6 +10,8 @@
         <section class="post">
             <div class="container">
                 <h1 class="post__title">Blog</h1>
+            <div class="sidebar__container">
+                <div class="main-part">
                 <img class="post__img" src=" <?php echo get_the_post_thumbnail_url()?>">
                 <p class="post__info"><span class="post__info-date"><?php echo get_the_date('d/m/Y')?></span>|<span class="post__info-category">
                     <?php foreach(get_the_category() as $cat) : ?>
@@ -20,6 +22,20 @@
                 <div class="post__content">
                     <?php the_content()?>
                 </div>
+                    </div>
+                    <div class="sidebar">
+                <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
+         
+         <div id="true-side" class="sidebar">
+        
+             <?php dynamic_sidebar( 'true_side' ); ?>
+        
+         </div>
+        
+        <?php endif; ?>
+                </div>
+            </div>
+
             </div>
         </section>
     </main>
