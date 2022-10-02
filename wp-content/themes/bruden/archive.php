@@ -1,29 +1,48 @@
+
 <?php get_header(); ?>
 
-<main>
-    <div class="container">
-    <h2 class="archive__title">Проекти</h2>
-    <ul class="archive__list">
-    <?php while ( have_posts() ) : ?>
-        <?php the_post()?>
-        <li class="archive__list-item">
-        <div class="card">
-            <h3 class="card__title">
-                <a href="<?php echo the_permalink() ?>"><?php echo the_title() ?><a>
-            </h3>
-            <time class="card__date" datetime="<?php echo get_the_time('d.m.Y')?>"><?php echo get_the_time('d.m.Y')?></time>
-            <p class="card__content">
-            <img src="<?php echo carbon_get_post_meta($post->ID, 'project_mini_img')?>">
-                <?php echo carbon_get_post_meta($post->ID, 'project_desc')?>
-            </p>
-            <a href="<?php echo the_permalink() ?>" class="card__more">
-                Дізнатись більше
-                <img src="<?php echo get_template_directory_uri()?>/assets/img/right-arrow.png">
-            </a>
+<main class="main">
+    <section class="blog" style="padding-top: 110px">
+        <div class="container">
+            <h1 class="blog__title">Blog</h1>
+        <div class="sidebar__container">
+                <div class="sidebar">
+                <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
+         
+         <div id="true-side" class="sidebar">
+        
+             <?php dynamic_sidebar( 'true_side' ); ?>
+        
+         </div>
+        
+        <?php endif; ?>
+                </div>
+        <div class="main-part">
+                <ul class="blog__list">
+
+        <?php if ( have_posts() ) {
+        	while ( have_posts() ) {
+        		the_post(); ?>
+                    <li class="blog__item">
+                        <a href="<?php the_permalink() ?>">
+                        <img class="blog__item-img" src=" <?php echo get_the_post_thumbnail_url()?>">
+                        </a>
+                        <h4 class="blog__item-title"><?php the_title() ?></h4>
+                        <p class="blog__item-date"><?php echo get_the_date('d/m/Y')?></p>
+                        <p class="blog__item-content">   <?php echo wp_trim_words(get_the_content(), 28)?> </p>
+                         <a href="<?php the_permalink() ?>" class="blog__item-more">Read more</a>
+                    </li>                     
+        	<?php } 
+            }
+            ?>
+                </ul>
+                <ul class="blog__paggination">
+                    <?php siteDefPaging() ?>
+                </ul>
         </div>
-        </li>
-    <?php endwhile ?>
-    </ul>
-    </div>
+        </div>
+        </div>
+    </section>
 </main>
+
 <?php get_footer(); ?>

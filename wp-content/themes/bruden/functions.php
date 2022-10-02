@@ -28,9 +28,9 @@ function site_styles () {
     // if(is_search()){
     //     wp_enqueue_style('search-style', get_template_directory_uri() . '/assets/css/search.css', [], $version);
     // }
-    // if(is_archive()){
-    //     wp_enqueue_style('archive-style', get_template_directory_uri() . '/assets/css/archive.css', [], $version);
-    // }
+    if(is_archive()){
+        wp_enqueue_style('bloh-style', get_template_directory_uri() . '/assets/css/blog.css', [], $version);
+    }
     if (is_single()) {
         wp_enqueue_style('post-style', get_template_directory_uri() . '/assets/css/post.css', [], $version);
     }
