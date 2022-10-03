@@ -187,30 +187,26 @@ Template Name: Home page
                     <div class="news-swiper swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper news-swiper__wrapper">
-                          <!-- Slides -->
-
-                          <?php 
-                          $args = array(
-                            'posts_per_page' => 6, 
-                            );
-$query = new WP_Query( $args );
-// Цикл
-if ( $query->have_posts() ) {
-    while ( $query->have_posts() ) {
-        $query->the_post();
-        ?>
-          <div class="swiper-slide news__swiper-slide"> 
-                            <a href="<?php the_permalink()?>">
-                             <img src="<?php echo get_the_post_thumbnail_url()?>" class="news__img">
-                             <h3 class="news__name"><?php the_title() ?></h3>
-                             <p class="news__text"> <?php echo wp_trim_words(get_the_content(), 28)?></p>
-                             <a href="<?php the_permalink()?>" class="news__more">Read more</a>
-                             <p class="news__date"> <?php echo get_the_date('d/m/Y')?> Min Read</p>
-                            </a>
-                        </div>
-        <?php
-    }
-}?>
+                            <!-- Slides -->
+                            <?php 
+                            $args = array('posts_per_page' => 6,);
+                            $query = new WP_Query( $args );
+                            // Цикл
+                            if ( $query->have_posts() ) {
+                                while ( $query->have_posts() ) {
+                                    $query->the_post();
+                                    ?>
+                                    <div class="swiper-slide news__swiper-slide"> 
+                                        <a href="<?php the_permalink()?>">
+                                        <img src="<?php echo get_the_post_thumbnail_url()?>" class="news__img">
+                                        <h3 class="news__name"><?php the_title() ?></h3>
+                                        <p class="news__text"> <?php echo wp_trim_words(get_the_content(), 28)?></p>
+                                        <a href="<?php the_permalink()?>" class="news__more">Read more</a>
+                                        <p class="news__date"> <?php echo get_the_date('d/m/Y')?> Min Read</p>
+                                        </a>
+                                    </div>
+                                    <?php } ?>
+                                <?php } ?>
                         </div>
                         <!-- If we need pagination -->
                     </div>
@@ -218,7 +214,6 @@ if ( $query->have_posts() ) {
                         <button class="nagination__prev-btn"><img src="<?php echo get_template_directory_uri() ?>/assets/img/left_arr.png"></button>
                         <button class="nagination__next-btn"><img src="<?php echo get_template_directory_uri() ?>/assets/img/right_arr.png"></button>
                     </div>
-                </div>
                 </div>
             </section>
             <section class="fits">

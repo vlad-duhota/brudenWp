@@ -139,7 +139,6 @@ function theme_support() {
 
 
 function true_register_wp_sidebars() {
- 
 	/* В боковой колонке - первый сайдбар */
 	register_sidebar(
 		array(
@@ -152,7 +151,12 @@ function true_register_wp_sidebars() {
 			'after_title' => '</h2>'
 		)
 	);
- 
 }
  
 add_action( 'widgets_init', 'true_register_wp_sidebars' );
+
+
+// include woocommerce
+if ( class_exists( 'WooCommerce' ) ) {
+    require_once( get_template_directory() . '/wooc.php' );
+}
