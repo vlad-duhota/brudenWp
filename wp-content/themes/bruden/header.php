@@ -32,7 +32,7 @@
                 <?php
           wp_nav_menu( array( 
             'theme_location' => 'main_menu', 
-            'container_class' => 'menu' ) ); 
+            'container_class' => 'nav' ) ); 
           ?>
                 <div class="header__right">
                     <div class="header__right-item">

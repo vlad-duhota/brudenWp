@@ -9,9 +9,18 @@ $grey: #7F7F7F;
 .post{
     padding-top: 90px;
     padding-bottom: 90px;
+    @media(max-width:768px){
+        padding-bottom: 10px;
+    }
+    @media(max-width:578px){
+       text-align: center;
+    }
     &__title{
         text-align: center;
         margin-bottom: 50px;
+        @media(max-width:768px){
+            margin-bottom: 20px;
+        }
     }
     &__img{
         width: 100%;
@@ -26,6 +35,10 @@ $grey: #7F7F7F;
         align-items: center;
         gap: 5px;
         margin-bottom: 30px;
+        @media(max-width:578px){
+            justify-content: center;
+            margin-bottom: 15px;
+         }
         &-date{
             display: flex;
             &::before{
@@ -55,6 +68,9 @@ $grey: #7F7F7F;
         line-height: 160%;
         letter-spacing: 0.05em;
         color: #000000;
+        @media(max-width:578px){
+            margin-top: 15px;
+         }
     }
 }
 
@@ -62,4 +78,7 @@ $grey: #7F7F7F;
     display: grid;
     grid-template-columns: auto 260px;
     gap: 40px;
+    @media(max-width:768px){
+        grid-template-columns: 1fr;
+    }
 }

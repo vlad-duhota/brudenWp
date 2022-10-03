@@ -1,13 +1,3 @@
-const menuBtn = document.querySelector('.header__burger-btn');
-const menu = document.querySelector('.menu');
-const right = document.querySelector('.header__right');
-
-menuBtn.addEventListener('click', function(){
-    this.classList.toggle('header__burger-btn_active');
-    menu.classList.toggle('menu_active');
-    right.classList.toggle('header__right_active');
-});
-
 const swiper = new Swiper('.hero-swiper', {
     // Optional parameters
     direction: 'vertical',

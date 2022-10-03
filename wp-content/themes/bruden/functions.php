@@ -44,6 +44,7 @@ add_action('wp_enqueue_scripts', 'site_scripts');
 function site_scripts() {
     $version = '0.1';
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], $version , true);
+    wp_enqueue_script('menu', get_template_directory_uri() . '/assets/js/menu.js', [], $version , true);
     if(is_page_template('front-page.php')){
         wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', [], $version , true);
     }

@@ -47,9 +47,6 @@ h2 {
     font-weight: 400;
     font-size: 28px;
     letter-spacing: 0.1em;
-    @media(max-width:578px){
-        font-size: 22px;
-    }
 }
 
 h3 {
@@ -68,6 +65,10 @@ body{
     font-size: 14px;
     font-weight: 300;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+button, input[type="submit"]{
+    cursor: pointer;
 }
 
 // header
@@ -105,6 +106,7 @@ body{
         }
         @media(max-width:578px){
             margin-left: auto;
+            margin-right: 15px;
         }
         span{
             display: block;
@@ -210,7 +212,7 @@ body{
     }
 }
 
-.menu{
+.nav{
     @media(max-width:992px){
         position: fixed;
         z-index: 4;
@@ -321,6 +323,7 @@ body{
     button{
         background: none;
         border: none;
+        cursor: pointer;
     }
   }
 
@@ -435,6 +438,9 @@ body{
 // sidebar
 // sidebar
 .sidebar {
+    @media(max-width:768px){
+        text-align: center;
+     }
     h2{
         position: relative;
         display: inline-block;
@@ -449,27 +455,48 @@ body{
             left: 0;
             bottom: -15px;
             background: $red;
+            @media(max-width:768px){
+                width: 100%;
+            }
         }
     }
     li a{
         font-size: 16px;
         letter-spacing: 0.05em;
         color: #000000;
+      
     }
     li{
         padding-top: 15px;
         display: block;
+        @media(max-width:768px){
+         padding-top: 10px;
+         }
         &:not(:last-child){
             padding-bottom: 15px;
             border-bottom: 1px solid #000;
+            @media(max-width:768px){
+                padding-bottom: 10px;
+                }
         }
         &:hover{
             text-decoration: underline;   
         }
     }
+    img{
+        @media(max-width:768px){
+            display: block !important;
+            float: none !important;
+            margin-left: auto !important;
+            margin-right: auto !important; 
+         }
+    }
     .side-widget{
         &:not(:last-child){
             margin-bottom: 50px;
+            @media(max-width:768px){
+                margin-bottom: 20px;
+            }
         }
     }
     .rpwwt-post-date{
@@ -485,5 +512,14 @@ body{
         line-height: 19px;
         letter-spacing: 0.1em;
         color: #000;
+    }
+    .current-cat{
+        a{
+            color: $red;
+        }
+
+    }
+    a[aria-current="page"]{
+            color: $red;
     }
 }

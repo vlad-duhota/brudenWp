@@ -40,12 +40,6 @@ h2 {
   letter-spacing: 0.1em;
 }
 
-@media (max-width: 578px) {
-  h2 {
-    font-size: 22px;
-  }
-}
-
 h3 {
   font-weight: 500;
   font-size: 24px;
@@ -62,6 +56,10 @@ body {
   font-size: 14px;
   font-weight: 300;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
 }
 
 .header {
@@ -122,6 +120,7 @@ body {
 @media (max-width: 578px) {
   .header__burger-btn {
     margin-left: auto;
+    margin-right: 15px;
   }
 }
 
@@ -273,13 +272,13 @@ body {
   font-weight: 500;
 }
 
-.menu {
+.nav {
   -webkit-transition: top .3s, opacity .3s;
   transition: top .3s, opacity .3s;
 }
 
 @media (max-width: 992px) {
-  .menu {
+  .nav {
     position: fixed;
     z-index: 4;
     top: -100vh;
@@ -300,12 +299,12 @@ body {
   }
 }
 
-.menu_active {
+.nav_active {
   top: 0;
   opacity: 1;
 }
 
-.menu ul {
+.nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,35 +312,35 @@ body {
 }
 
 @media (max-width: 992px) {
-  .menu ul {
+  .nav ul {
     display: block;
     text-align: center;
   }
 }
 
 @media (max-width: 992px) {
-  .menu li:not(:last-child) {
+  .nav li:not(:last-child) {
     margin-bottom: 25px;
   }
 }
 
-.menu li.current_page_parent a {
+.nav li.current_page_parent a {
   color: #DE1616;
 }
 
-.menu a {
+.nav a {
   font-size: 18px;
   color: #000;
   position: relative;
 }
 
 @media (max-width: 992px) {
-  .menu a {
+  .nav a {
     font-size: 28px;
   }
 }
 
-.menu a::after {
+.nav a::after {
   content: '';
   display: block;
   position: absolute;
@@ -356,7 +355,7 @@ body {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.menu a:hover::after {
+.nav a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -421,6 +420,7 @@ body {
 .navigation button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -580,6 +580,12 @@ body {
           transform: scaleX(1);
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    text-align: center;
+  }
+}
+
 .sidebar h2 {
   position: relative;
   display: inline-block;
@@ -598,6 +604,12 @@ body {
   background: #DE1616;
 }
 
+@media (max-width: 768px) {
+  .sidebar h2::after {
+    width: 100%;
+  }
+}
+
 .sidebar li a {
   font-size: 16px;
   letter-spacing: 0.05em;
@@ -609,17 +621,44 @@ body {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .sidebar li {
+    padding-top: 10px;
+  }
+}
+
 .sidebar li:not(:last-child) {
   padding-bottom: 15px;
   border-bottom: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+  .sidebar li:not(:last-child) {
+    padding-bottom: 10px;
+  }
 }
 
 .sidebar li:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .sidebar img {
+    display: block !important;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 .sidebar .side-widget:not(:last-child) {
   margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .sidebar .side-widget:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .sidebar .rpwwt-post-date {
@@ -636,4 +675,12 @@ body {
   line-height: 19px;
   letter-spacing: 0.1em;
   color: #000;
+}
+
+.sidebar .current-cat a {
+  color: #DE1616;
+}
+
+.sidebar a[aria-current="page"] {
+  color: #DE1616;
 }

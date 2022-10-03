@@ -188,34 +188,29 @@ Template Name: Home page
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper news-swiper__wrapper">
                           <!-- Slides -->
-                          <div class="swiper-slide news__swiper-slide"> 
-                            <a href="#">
-                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/news_1.png" class="news__img">
-                             <h3 class="news__name">Bruden Mode Is Taking Care of Women</h3>
-                             <p class="news__text">Bruden Mode in Montreal has taken a lot of time and put a lot of effort into helping women not only look great but to be more healthy.</p>
-                             <a href="#" class="news__more">Read More</a>
-                             <p class="news__date">April 3 - 2 Min Read</p>
+
+                          <?php 
+                          $args = array(
+                            'posts_per_page' => 6, 
+                            );
+$query = new WP_Query( $args );
+// Цикл
+if ( $query->have_posts() ) {
+    while ( $query->have_posts() ) {
+        $query->the_post();
+        ?>
+          <div class="swiper-slide news__swiper-slide"> 
+                            <a href="<?php the_permalink()?>">
+                             <img src="<?php echo get_the_post_thumbnail_url()?>" class="news__img">
+                             <h3 class="news__name"><?php the_title() ?></h3>
+                             <p class="news__text"> <?php echo wp_trim_words(get_the_content(), 28)?></p>
+                             <a href="<?php the_permalink()?>" class="news__more">Read more</a>
+                             <p class="news__date"> <?php echo get_the_date('d/m/Y')?> Min Read</p>
                             </a>
                         </div>
-                        <div class="swiper-slide news__swiper-slide"> 
-                            <a href="#">
-                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/news_2.png" class="news__img">
-                             <h3 class="news__name">Bruden Mode Accessories</h3>
-                             <p class="news__text">Finding the perfect little thing that compliments your wardrobe can give you the confidence and the feeling you love to be your best.</p>
-                             <a href="#" class="news__more">Read More</a>
-                             <p class="news__date">April 3 - 2 Min Read</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide news__swiper-slide"> 
-                            <a href="#">
-                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/news_3.png" class="news__img">
-                             <h3 class="news__name">Different Types of Backpacks</h3>
-                             <p class="news__text">Different backpacks do different things and serve various purposes.
-                            </p>
-                             <a href="#" class="news__more">Read More</a>
-                             <p class="news__date">April 3 - 2 Min Read</p>
-                            </a>
-                        </div>
+        <?php
+    }
+}?>
                         </div>
                         <!-- If we need pagination -->
                     </div>
