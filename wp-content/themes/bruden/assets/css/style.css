@@ -324,7 +324,7 @@ button, input[type="submit"] {
   }
 }
 
-.nav li.current_page_parent a {
+.nav li.current-menu-item a {
   color: #DE1616;
 }
 

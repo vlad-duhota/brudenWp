@@ -27,6 +27,19 @@
 
 .hero__content {
   max-width: 540px;
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+  opacity: 0;
+  -webkit-transition: opacity .5s .5s, -webkit-transform 1s;
+  transition: opacity .5s .5s, -webkit-transform 1s;
+  transition: transform 1s, opacity .5s .5s;
+  transition: transform 1s, opacity .5s .5s, -webkit-transform 1s;
+}
+
+.hero .swiper-slide-active .hero__content {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hero__cats {
