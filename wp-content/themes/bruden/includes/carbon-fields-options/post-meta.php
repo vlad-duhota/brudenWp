@@ -9,18 +9,29 @@ use Carbon_Fields\Field;
 
 // =========== HOME PAGE ===========
 
-Container::make('post meta', 'Проект')
-->where( 'post_type', '=', 'project' )    
+Container::make('post meta', 'First section')
+->show_on_template('about-page.php')
 ->add_fields( array(
-   Field::make( 'text', 'project_desc', 'Опис' ),
-   Field::make( 'text', 'project_link', 'Посилання' ),
-   Field::make( 'text', 'project_author', 'Автор' ),
-   Field::make( 'text', 'project_age', 'Вік' ),
-   Field::make( 'image', 'project_author_img', 'Фото автора(авторів)' )
-   ->set_value_type('url'),
-   Field::make( 'image', 'project_mini_img', 'Мініатюра фото проекта' )
+   Field::make( 'text', 'about_uptitle', 'Uptitle' ),
+   Field::make( 'text', 'about_title', 'Title' ),
+   Field::make( 'text', 'about_text_1', 'Text paragraph 1' ),
+   Field::make( 'text', 'about_text_2', 'Text paragraph 2' ),
+   Field::make( 'image', 'about_img', 'Photo' )
    ->set_value_type('url'),
 ) );
+
+
+Container::make('post meta', 'Advantages section')
+->show_on_template('about-page.php')
+->add_fields( array(
+   Field::make( 'complex', 'advantages_list', 'List' )
+   ->set_max(3)
+   ->add_fields( array(
+       Field::make( 'text', 'advantages_list_title', 'Title' ),
+       Field::make( 'text', 'advantages_list_text', 'Text' ),
+   ) )
+) );
+
 
 
 
