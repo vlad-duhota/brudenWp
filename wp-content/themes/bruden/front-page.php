@@ -111,9 +111,11 @@ Template Name: Home page
                     <div class="deal-swiper swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper deal-swiper__wrapper"><?php 
+                                $this_tag = $wp_query->queried_object->slug;
                                 query_posts([
                                     'post_type' => 'product',
                                     'posts_per_page' => -1,
+                                    'product_tag' => 'deal-of-the-week',
                                     // 'tax_query' => array(
                                     //     array(
                                     //         'taxonomy' => 'tag',
