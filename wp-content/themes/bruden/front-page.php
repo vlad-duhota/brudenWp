@@ -116,14 +116,7 @@ Template Name: Home page
                                     'post_type' => 'product',
                                     'posts_per_page' => -1,
                                     'product_tag' => 'deal-of-the-week',
-                                    // 'tax_query' => array(
-                                    //     array(
-                                    //         'taxonomy' => 'tag',
-                                    //         'field'    => 'term_id',
-                                    //         'terms'    => 25
-                                    //     )
-                                    // )
-                                ]) 
+                                ])
                             ?>
                             <?php if ( have_posts() ) :
                                 while ( have_posts() ) :

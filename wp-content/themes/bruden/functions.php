@@ -138,22 +138,33 @@ function theme_support() {
 }
 
 
-function true_register_wp_sidebars() {
-	/* В боковой колонке - первый сайдбар */
+function bruden_register_wp_sidebars() {
+	/* In aside */
 	register_sidebar(
 		array(
-			'id' => 'true_side', // уникальный id
-			'name' => 'Siidebar', // название сайдбара
-			'description' => 'Drag widgets into it to show them on sidebar.', // описание
-			'before_widget' => '<div id="%1$s" class="side-widget %2$s">', // по умолчанию виджеты выводятся <li>-списком
+			'id' => 'bruden_aside',
+			'name' => 'Siidebar',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="aside-widget %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '<h2 class="widget-title">', // по умолчанию заголовки виджетов в <h2>
+			'before_title' => '<h2 class="widget-title">',
 			'after_title' => '</h2>'
 		)
 	);
+    /* In footer */
+	register_sidebar(
+		array(
+			'id' => 'bruden_foot',
+			'name' => 'Footer',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="foot widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 }
- 
-add_action( 'widgets_init', 'true_register_wp_sidebars' );
+add_action( 'widgets_init', 'bruden_register_wp_sidebars' );
 
 
 // include woocommerce
