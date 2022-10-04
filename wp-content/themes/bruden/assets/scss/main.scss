@@ -29,6 +29,15 @@ $grey: #7F7F7F;
     }
     &__content{
         max-width: 540px;
+        transform: translateX(-50vw);
+        opacity: 0;
+        transition: transform 1s, opacity .5s .5s;
+    }
+    .swiper-slide-active{
+        .hero__content{
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
     &__cats{
         display: flex;
