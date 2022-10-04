@@ -227,10 +227,7 @@ Template Name: Home page
                         Special products
                     </h2>
                     <p class="special__text">Register now to get updates on promotions </p>
-                    <form action="#" class="special__form">
-                        <input type="email" class="special__form-input special__form-input_email">
-                        <input type="submit" class="special__form-input special__form-input_submit" value="subscribe">
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="69" title="Email"]')?>
                 </div>
             </section>
         </main>

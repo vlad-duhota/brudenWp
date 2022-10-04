@@ -25,9 +25,9 @@ function site_styles () {
     if(is_page_template('front-page.php')){
         wp_enqueue_style('front-page-style', get_template_directory_uri() . '/assets/css/main.css', [], $version);
     }
-    // if(is_search()){
-    //     wp_enqueue_style('search-style', get_template_directory_uri() . '/assets/css/search.css', [], $version);
-    // }
+    if(is_page_template('about-page.php')){
+        wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/about.css', [], $version);
+    }
     if(is_archive()){
         wp_enqueue_style('bloh-style', get_template_directory_uri() . '/assets/css/blog.css', [], $version);
     }
@@ -48,23 +48,23 @@ function site_scripts() {
     if(is_page_template('front-page.php')){
         wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', [], $version , true);
     }
-    // if (is_single()) {
-    //     wp_enqueue_script('post-script', get_template_directory_uri() . '/assets/js/post.js', [], $version, true);
-    // }
+    if(is_page_template('about-page.php')){
+        wp_enqueue_script('about', get_template_directory_uri() . '/assets/js/about.js', [], $version , true);
+    }
 }
 
-//// Carbon Fields
-// add_action( 'after_setup_theme', 'crb_load' );
-// function crb_load() {
-// 	require_once( 'includes/carbon-fields/vendor/autoload.php' );
-// 	\Carbon_Fields\Carbon_Fields::boot();
-// }
+// Carbon Fields
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+	require_once( 'includes/carbon-fields/vendor/autoload.php' );
+	\Carbon_Fields\Carbon_Fields::boot();
+}
 
-// add_action('carbon_fields_register_fields', 'register_carbon_fields');
-// function register_carbon_fields () {
-//     require_once('includes/carbon-fields-options/theme-options.php');
-//     require_once('includes/carbon-fields-options/post-meta.php');
-// }
+add_action('carbon_fields_register_fields', 'register_carbon_fields');
+function register_carbon_fields () {
+    require_once('includes/carbon-fields-options/theme-options.php');
+    require_once('includes/carbon-fields-options/post-meta.php');
+}
 
 // Theme support
 add_theme_support( 'title-tag' );
