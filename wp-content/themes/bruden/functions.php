@@ -70,7 +70,7 @@ function site_scripts() {
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo' );
 add_theme_support('post-thumbnails');
-add_image_size('product', 500, 313, true);
+add_image_size('thumbnail_520x680', 520, 680, true);
 
 // Global variables
 

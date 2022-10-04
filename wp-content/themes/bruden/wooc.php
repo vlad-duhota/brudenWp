@@ -10,8 +10,8 @@ function ms_woocommerce_support() {
 
 // add_filter('woocommerce_get_image_size_single', function ($size){
 //     return array(
-//         'width' => 770,
-//         'height' => 650,
+//         'width' => 520,
+//         'height' => 680,
 //         'crop'   => 0,
 //     );
 // });

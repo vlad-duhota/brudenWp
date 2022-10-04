@@ -14,3 +14,5 @@ Stack trace:
 #3 {main}
   thrown in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php on line 79
 
+2022-10-04T02:26:40+00:00 CRITICAL syntax error, unexpected 'alt' (T_STRING), expecting ')' in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php on line 124
+
