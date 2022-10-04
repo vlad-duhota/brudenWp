@@ -1,0 +1,16 @@
+2022-10-04T01:01:43+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php:79
+Stack trace:
+#0 C:\MAMP\htdocs\Bruden\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Bruden\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Bruden\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php on line 79
+
+2022-10-04T01:03:49+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php:79
+Stack trace:
+#0 C:\MAMP\htdocs\Bruden\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Bruden\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Bruden\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Bruden\wp-content\themes\bruden\front-page.php on line 79
+

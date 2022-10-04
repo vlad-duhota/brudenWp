@@ -10,7 +10,7 @@ Template Name: Home page
 
 <?php get_header(); ?>
   
-<main class="main">
+        <main class="main">
             <section class="hero">
               <div class="container">
                 <div class="hero-swiper swiper">
@@ -65,29 +65,31 @@ Template Name: Home page
                         Shop by category
                     </h2>
                     <div class="category-swiper swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper category-swiper__wrapper">
-                          <!-- Slides -->
-                          <div class="swiper-slide category__swiper-slide"> 
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/category_1.png" class="category__img">
-                                <h3 class="category__name">Bags</h3>
-                            </a>
+                        <div class="swiper-wrapper category-swiper__wrapper"><?php
+                            $prod_cat_args = array(
+                                'taxonomy'    => 'product_cat',
+                                'orderby'     => 'id', // здесь по какому полю сортировать
+                                'hide_empty'  => false, // скрывать категории без товаров или нет
+                                'parent'      => 0 // id родительской категории
+                            );
+                            $woo_categories = get_categories($prod_cat_args);
+                            foreach ($woo_categories as $woo_cat) :
+                                $woo_cat_id = $woo_cat->term_id; //category ID
+                                $woo_cat_name = $woo_cat->name; //category name
+                                $woo_cat_slug = $woo_cat->slug; //category slug
+                            
+                                if ($woo_cat_name !== "Misc") : ?>
+                                        <div class="swiper-slide category__swiper-slide">
+                                            <a href="<?php get_term_link($woo_cat_id, 'product_cat') ?>'"><?php
+                                                $category_thumbnail_id = get_term_meta($woo_cat_id, 'thumbnail_id', true);
+                                                $thumbnail_image_url = wp_get_attachment_url($category_thumbnail_id); ?>
+                                                <img src="<?php echo $thumbnail_image_url ?>'" class="category__img"/>
+                                                <h3 class="category__name"><?php echo $woo_cat_name ?></h3>
+                                            </a>
+                                        </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="swiper-slide category__swiper-slide"> 
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/category_2.png" class="category__img">
-                                <h3 class="category__name">Sunglasses</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide category__swiper-slide"> 
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/category_3.png" class="category__img">
-                                <h3 class="category__name">Belts</h3>
-                            </a>
-                        </div>  
-                        </div>
-                        <!-- If we need pagination -->
                     </div>
                     <div class="navigation category__navigation">
                         <button class="nagination__prev-btn"><img src="<?php echo get_template_directory_uri() ?>/assets/img/left_arr.png"></button>
@@ -102,63 +104,82 @@ Template Name: Home page
                 </div>
             </section>
             <section class="deal">
-                <div class="container">
+                <div class="container"><?php 
+                        query_posts([
+                            'post_type' => 'product',
+                            'posts_per_page' => -1,
+                        ]) 
+                    ?>
+                    <?php if ( have_posts() ) {
+                        while ( have_posts() ) {
+                            the_post(); ?>
+                                <li class="blog__item">
+                                    <a href="<?php the_permalink() ?>">
+                                    <img class="blog__item-img" src=" <?php echo get_the_post_thumbnail_url()?>">
+                                    </a>
+                                    <h4 class="blog__item-title"><?php the_title() ?></h4>
+                                </li>                     
+                        <?php } 
+                            wp_reset_query();
+                        }
+                    ?>
                     <h2 class="deal__title title_dashed">
                         Deal of the week
                     </h2>
                     <div class="deal-swiper swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper deal-swiper__wrapper">
-                          <!-- Slides -->
-                          <div class="swiper-slide deal__swiper-slide"> 
-                            <img class="deal__img" src="<?php echo get_template_directory_uri() ?>/assets/img/deal_1.png">
-                            <div class="deal__content">
-                                <h4 class="deal__name">Fiery Red Bruden Backpack</h4>
-                                <div class="deal__stars">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                            <!-- Slides -->
+                            <div class="swiper-slide deal__swiper-slide"> 
+                                <img class="deal__img" src="<?php echo get_template_directory_uri() ?>/assets/img/deal_1.png">
+                                <div class="deal__content">
+                                    <h4 class="deal__name">Fiery Red Bruden Backpack</h4>
+                                    <div class="deal__stars">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                    </div>
+                                    <p class="deal__price">C$ 99.99</p>
+                                    <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
+                                    <div class="deal__cols">
+                                        <button class="deal__btn">Add to cart</button>
+                                        <button class="deal__heart">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
+                                        </button>
+                                        <button class="deal__seen">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
+                                        </button>
+                                    </div>
                                 </div>
-                                <p class="deal__price">C$ 99.99</p>
-                                <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
-                                <div class="deal__cols">
-                                    <button class="deal__btn">Add to cart</button>
-                                    <button class="deal__heart">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
-                                    </button>
-                                    <button class="deal__seen">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
-                                    </button>
+                            </div>
+                            <!-- Slides -->
+                            <div class="swiper-slide deal__swiper-slide"> 
+                                <img class="deal__img" src="<?php echo get_template_directory_uri() ?>/assets/img/deal_2.png">
+                                <div class="deal__content">
+                                    <h4 class="deal__name">Bruden's Backpack</h4>
+                                    <div class="deal__stars">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                    </div>
+                                    <p class="deal__price">C$ 66.49</p>
+                                    <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
+                                    <div class="deal__cols">
+                                        <button class="deal__btn">Add to cart</button>
+                                        <button class="deal__heart">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
+                                        </button>
+                                        <button class="deal__seen">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                            <!-- Slides -->
-                            <div class="swiper-slide deal__swiper-slide"> 
-                              <img class="deal__img" src="<?php echo get_template_directory_uri() ?>/assets/img/deal_2.png">
-                              <div class="deal__content">
-                                  <h4 class="deal__name">Bruden's Backpack</h4>
-                                  <div class="deal__stars">
-                                      <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                      <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                      <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                      <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                      <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                  </div>
-                                  <p class="deal__price">C$ 66.49</p>
-                                  <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
-                                  <div class="deal__cols">
-                                      <button class="deal__btn">Add to cart</button>
-                                      <button class="deal__heart">
-                                          <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
-                                      </button>
-                                      <button class="deal__seen">
-                                          <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
-                                      </button>
-                                  </div>
-                              </div>
-                    </div>
                         <!-- If we need pagination -->
                     </div>
                     <div class="navigation deal__navigation">
@@ -205,8 +226,8 @@ Template Name: Home page
                                         <p class="news__date"> <?php echo get_the_date('d/m/Y')?> Min Read</p>
                                         </a>
                                     </div>
-                                    <?php } ?>
                                 <?php } ?>
+                            <?php } ?>
                         </div>
                         <!-- If we need pagination -->
                     </div>
