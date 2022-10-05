@@ -434,12 +434,12 @@ button, input[type="submit"]{
     }
 }
 
-// sidebar
+
 // sidebar
 .sidebar {
     @media(max-width:768px){
         text-align: center;
-     }
+    }
     h2{
         position: relative;
         display: inline-block;
@@ -457,6 +457,11 @@ button, input[type="submit"]{
             @media(max-width:768px){
                 width: 100%;
             }
+        }
+    }
+    &-aside {
+        &:nth-child(even) {
+            margin-bottom: 50px;
         }
     }
     li a{

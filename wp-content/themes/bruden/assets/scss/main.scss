@@ -5,8 +5,8 @@ $yellow: #FDAE04;
 $red: #DE1616;
 $grey: #7F7F7F;
 
-// hero
 
+// hero
 .hero{
     .container{
         position: relative;
@@ -348,7 +348,6 @@ $grey: #7F7F7F;
 }
 
 
-
 // deal
 .deal{
     padding-top: 90px;
@@ -360,13 +359,13 @@ $grey: #7F7F7F;
     }
     &__content{
         border-width: 1px 1px 1px 0px;
-border-style: solid;
-border-color: $grey;
-padding: 25px;
-@media(max-width:578px){
-    border-width: 1px 1px 1px 1px;
-    margin-top: 25px;
-}
+        border-style: solid;
+        border-color: $grey;
+        padding: 25px;
+        @media(max-width:578px){
+            border-width: 1px 1px 1px 1px;
+            margin-top: 25px;
+        }
     }
     &__name{
         text-align: center;
@@ -380,12 +379,12 @@ padding: 25px;
     }
     &__price{
         font-weight: 300;
-font-size: 22px;
-letter-spacing: 0.05em;
-color: #000000;
-text-align: center;
-padding-bottom: 15px;
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 22px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     &__text{
@@ -403,20 +402,20 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         border: none;
         padding: 8px 14px;
         font-weight: 400;
-font-size: 14px;
-line-height: 14px;
-/* identical to box height, or 100% */
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
 
-letter-spacing: 0.1em;
-text-transform: capitalize;
-font-family: inherit;
-margin-right: auto;
-border: 1px solid #000;
-transition: background .3s, color .3s;
-&:hover{
-    background: #fff;
-    color: #000;
-}
+        letter-spacing: 0.1em;
+        text-transform: capitalize;
+        font-family: inherit;
+        margin-right: auto;
+        border: 1px solid #000;
+        transition: background .3s, color .3s;
+        &:hover{
+            background: #fff;
+            color: #000;
+        }
     }
     &__heart,
     &__seen{
@@ -436,4 +435,3 @@ transition: background .3s, color .3s;
         flex-direction: column;
     }
 }
-

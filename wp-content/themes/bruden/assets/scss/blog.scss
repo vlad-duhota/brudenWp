@@ -35,6 +35,11 @@ $grey: #7F7F7F;
                 object-fit: contain;
             }
         }
+        &-title {
+            display: inline-block;
+            letter-spacing: 0.1em;
+            color: #000000;
+        }
         &-date{
             color: $grey;
             font-weight: 500;

@@ -90,3 +90,22 @@ const swiper4 = new Swiper('.deal-swiper', {
       
 }
 );
+const swiper5 = new Swiper('.latest-swiper', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    speed: 600,
+    navigation: {
+      nextEl: '.latest__navigation .nagination__next-btn',
+      prevEl: '.latest__navigation .nagination__prev-btn',
+    },
+    breakpoints: {
+      320: {
+          slidesPerView: 1,
+      },
+      1155: {
+          slidesPerView: 3,
+      },
+    },
+  }
+);

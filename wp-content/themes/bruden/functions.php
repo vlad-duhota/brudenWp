@@ -45,9 +45,7 @@ function site_scripts() {
     $version = '0.1';
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], $version , true);
     wp_enqueue_script('menu', get_template_directory_uri() . '/assets/js/menu.js', [], $version , true);
-    if(is_page_template('front-page.php')){
-        wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', [], $version , true);
-    }
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', [], $version , true);
     if(is_page_template('about-page.php')){
         wp_enqueue_script('about', get_template_directory_uri() . '/assets/js/about.js', [], $version , true);
     }
@@ -145,10 +143,10 @@ function bruden_register_wp_sidebars() {
 			'id' => 'bruden_aside',
 			'name' => 'Siidebar',
 			'description' => 'Drag widgets into it to show them on sidebar.',
-			'before_widget' => '<div id="%1$s" class="aside-widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="sidebar-aside %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>'
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
 		)
 	);
     /* In footer */
@@ -157,7 +155,19 @@ function bruden_register_wp_sidebars() {
 			'id' => 'bruden_foot',
 			'name' => 'Footer',
 			'description' => 'Drag widgets into it to show them on sidebar.',
-			'before_widget' => '<div id="%1$s" class="foot widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+    /* In Shop Aside */
+	register_sidebar(
+		array(
+			'id' => 'bruden_shop',
+			'name' => 'Shop && Product',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="sidebar-woo widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'
