@@ -28,6 +28,9 @@ function site_styles () {
     if(is_page_template('about-page.php')){
         wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/about.css', [], $version);
     }
+    if(is_page_template('contact-page.php')){
+        wp_enqueue_style('contact-style', get_template_directory_uri() . '/assets/css/contact.css', [], $version);
+    }
     if(is_archive()){
         wp_enqueue_style('bloh-style', get_template_directory_uri() . '/assets/css/blog.css', [], $version);
     }

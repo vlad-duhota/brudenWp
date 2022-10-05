@@ -440,7 +440,7 @@ button, input[type="submit"]{
     @media(max-width:768px){
         text-align: center;
     }
-    h2{
+    h3{
         position: relative;
         display: inline-block;
         margin-bottom: 30px;
@@ -460,8 +460,12 @@ button, input[type="submit"]{
         }
     }
     &-aside {
-        &:nth-child(even) {
+        &:not(:last-child) {
             margin-bottom: 50px;
+
+            @media(max-width:768px){
+                margin-bottom: 20px;
+            }
         }
     }
     li a{
@@ -494,14 +498,6 @@ button, input[type="submit"]{
             margin-left: auto !important;
             margin-right: auto !important; 
          }
-    }
-    .side-widget{
-        &:not(:last-child){
-            margin-bottom: 50px;
-            @media(max-width:768px){
-                margin-bottom: 20px;
-            }
-        }
     }
     .rpwwt-post-date{
         font-weight: 500;

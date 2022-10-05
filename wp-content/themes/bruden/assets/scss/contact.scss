@@ -1,0 +1,165 @@
+// vars
+
+$dark: #292A33;
+$yellow: #FDAE04;
+$red: #DE1616;
+$grey: #7F7F7F;
+
+.contact{
+    padding: 90px 0;
+    @media(max-width:992px){
+        padding-bottom: 45px;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 50px;
+        @media(max-width:578px){
+            margin-bottom: 20px;
+        }
+    }
+    &__cols{
+        display: grid;
+        grid-template-columns: 215px auto;
+        @media(max-width:992px){
+                grid-template-columns: 1fr;
+        }
+        @media(max-width:578px){
+            margin-bottom: 25px;
+        }
+    }
+    &__col{
+        &-title{
+            margin-bottom: 50px;
+            @media(max-width:578px){
+                margin-bottom: 15px;
+            }
+        }
+        &_1{
+            @media(max-width:578px){
+                text-align: center;
+            }
+        }
+        &_2{
+            padding-left: 6vw;
+            @media(max-width:992px){
+                order: -1;
+                padding-left: 0;
+            }
+        }
+    }
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+        &-title{
+            margin-bottom: 15px;
+        }
+        &-link{
+            font-size: 18px;
+            letter-spacing: 0.05em;
+            color: #000000;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sidebar__container{
+    display: grid;
+    grid-template-columns: auto 260px;
+    gap: 40px;
+    @media(max-width:768px){
+        grid-template-columns: 1fr;
+    }
+    @media(max-width:578px){
+        gap: 20px;
+    }
+}
+
+// form
+.form{
+    &__input{
+        width: 100%;
+        background: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        &:focus{
+            outline: none;
+            border: 1px solid #000;
+        }
+    }
+}
+
+form{
+    label{
+        font-family: 'Josefin Sans';
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #000000;
+    }
+    .wpcf7-form-control-wrap{
+        margin-top: 10px;
+        display: block;
+        position: relative;
+    }
+    .wpcf7-not-valid-tip{
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .wpcf7-response-output{
+        border: none !important;
+        font-size: 16px;
+        position: relative;
+        padding: 0 !important; 
+        margin: 20px auto 0 auto !important;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $red;
+            bottom: -10px;
+        }
+    }
+    p{
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+    textarea{
+        resize: none;
+        height: 180px;
+    }
+    input{
+        &:focus-visible{
+            & + .wpcf7-not-valid-tip{
+                display: none;
+            }
+        }
+    }
+    input[type="submit"]{
+        padding: 14px 28px;
+        background: #000;
+        font-weight: 300;
+        font-family: 'Josefin Sans';
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 1px solid #000;
+        transition: background .3s, color .3s;
+        &:hover{
+            background: #fff;
+            color: #000;
+        }
+        @media(max-width:578px){
+            width: 100%;
+        }
+    }
+}

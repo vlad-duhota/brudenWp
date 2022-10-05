@@ -2,14 +2,14 @@
     margin-bottom: 50px;
     text-align: center;
     @media(max-width:578px){
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 }
 
 .about{
     padding: 90px 0;
     @media(max-width:992px){
-        padding: 45px 0;
+        padding-bottom: 45px;
     }
     &__cols{
         display: grid;

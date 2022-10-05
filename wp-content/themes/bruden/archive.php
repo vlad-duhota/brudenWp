@@ -6,17 +6,8 @@
         <div class="container">
             <h1 class="blog__title">Blog</h1>
         <div class="sidebar__container">
-                <div class="sidebar">
-                <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
-         
-         <div id="true-side" class="sidebar">
+        <?php get_sidebar( 'aside' ); ?>
         
-             <?php dynamic_sidebar( 'true_side' ); ?>
-        
-         </div>
-        
-        <?php endif; ?>
-                </div>
         <div class="main-part">
                 <ul class="blog__list">
 

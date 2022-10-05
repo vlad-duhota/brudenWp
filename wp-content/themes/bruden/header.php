@@ -26,8 +26,8 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png">
+                <a href="<?php echo get_site_url()?>" class="logo">
+                    <img src="<?php echo carbon_get_theme_option('logo')?>">
                 </a>
                 <?php
           wp_nav_menu( array( 
@@ -36,7 +36,7 @@
           ?>
                 <div class="header__right">
                     <div class="header__right-item">
-                        <a href="#" class="header__right__link">
+                        <a href="<?php echo carbon_get_theme_option('insta_url')?>" class="header__right__link">
                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/insta.svg">
                         </a>
                     </div>
