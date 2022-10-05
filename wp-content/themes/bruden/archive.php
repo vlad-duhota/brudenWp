@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="blog" style="padding-top: 110px">
+    <section class="blog">
         <div class="container">
             <h1 class="blog__title">Blog</h1>
         <div class="sidebar__container">

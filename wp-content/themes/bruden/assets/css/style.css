@@ -925,15 +925,20 @@ button, input[type="submit"] {
   opacity: 1;
 }
 
-.category {
+section.category {
   padding: 90px 0;
   text-align: center;
 }
 
 @media (max-width: 992px) {
-  .category {
+  section.category {
     padding: 45px 0;
   }
+}
+
+section.category img {
+  width: 100%;
+  height: auto;
 }
 
 .category__name {
@@ -951,11 +956,6 @@ button, input[type="submit"] {
 .category__swiper-slide:hover {
   -webkit-box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.15);
-}
-
-.category img {
-  width: 100%;
-  height: auto;
 }
 
 .category-swiper {
