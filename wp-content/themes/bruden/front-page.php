@@ -122,7 +122,7 @@ Template Name: Home page
                                 while ( have_posts() ) :
                                     the_post(); ?>
                                         <div class="swiper-slide deal__swiper-slide">
-                                            <a href="<?php the_permalink() ?>">
+                                            <a href="<?php the_permalink() ?>" class="deal__img">
                                                 <?php echo get_the_post_thumbnail( null, 'thumbnail_520x680' ) ?>
                                             </a>
                                             <div class="deal__content">

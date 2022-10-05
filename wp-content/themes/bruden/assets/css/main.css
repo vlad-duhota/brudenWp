@@ -454,8 +454,11 @@
   }
 }
 
-.deal__img {
+.deal__img img {
   width: 260px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .deal__content {
@@ -475,7 +478,7 @@
 .deal__name {
   text-align: center;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .deal__stars {

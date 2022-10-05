@@ -355,7 +355,11 @@ $grey: #7F7F7F;
         padding-top: 45px;
     }
     &__img{
-        width: 260px;
+        img{
+            width: 260px;
+            height: 340px;
+            object-fit: cover;
+        }
     }
     &__content{
         border-width: 1px 1px 1px 0px;
@@ -370,7 +374,7 @@ $grey: #7F7F7F;
     &__name{
         text-align: center;
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 16px;
     }
     &__stars{
         display: flex;
