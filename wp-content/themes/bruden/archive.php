@@ -34,6 +34,24 @@
         </div>
         </div>
     </section>
+    <section class="insta">
+        <div class="container">
+        <div data-mc-src="da54c84f-049d-4c54-b03a-28fd6224fcbe#instagram"></div>
+        </div>
+        <div style="height: 50px; margin-top: -50px; background: #fff; position: relative; z-index: 3;"></div>
+    </section>
+    <section class="special">
+                <div class="container">
+                    <h2 class="special__title title_dashed">
+                        Special products
+                    </h2>
+                    <p class="special__text">Register now to get updates on promotions </p>
+                    <?php echo do_shortcode('[contact-form-7 id="69" title="Email"]')?>
+                </div>
+            </section>
 </main>
-
+<script 
+  src="https://cdn2.woxo.tech/a.js#633e7143bedc8621852eaa7f" 
+  async data-usrc>
+</script>
 <?php get_footer(); ?>
