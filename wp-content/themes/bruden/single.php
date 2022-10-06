@@ -30,7 +30,7 @@
         </section>
         <section class="latest">
             <div class="container">
-                <h2 class="latest__title title_dashed">Latest Posts</h2>
+                <h2 class="latest__title title_dashed">Latest Products</h2>
                 <div class="latest-swiper swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper latest-swiper__wrapper"><?php 
