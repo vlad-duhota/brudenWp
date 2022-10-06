@@ -184,3 +184,6 @@ add_action( 'widgets_init', 'bruden_register_wp_sidebars' );
 if ( class_exists( 'WooCommerce' ) ) {
     require_once( get_template_directory() . '/wooc.php' );
 }
+
+// off woocommerce styles
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
