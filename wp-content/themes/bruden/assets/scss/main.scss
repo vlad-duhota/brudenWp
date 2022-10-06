@@ -130,9 +130,16 @@ $grey: #7F7F7F;
 
 // aditional
 .additional{
+    &__video-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
     .container{
         height: 100vh;
-        background: url(../img/additional.png) center / cover no-repeat;
         position: relative;
         &::before{
             background-color: rgba(255,255,255,.3);
@@ -157,6 +164,7 @@ $grey: #7F7F7F;
         color: #fff;
         text-align: right;
         position: absolute;
+        z-index: 3;
         top: 40px;
         right: 40px;
         max-width: 232px;
@@ -166,6 +174,7 @@ $grey: #7F7F7F;
         position: absolute;
         bottom: 40px;
         right: 40px;
+        z-index: 3;
         transition: background .3s, color .3s;
         &:hover{
             background: #000;

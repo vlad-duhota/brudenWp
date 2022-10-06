@@ -98,9 +98,10 @@ Template Name: Home page
                 </div>
             </section>
             <section class="additional">
-                <div class="container" style="background: url(<?php echo get_template_directory_uri()?>/assets/img/additional.png) center/cover no-repeat;">
+                <div class="container">
                     <h2 class="additional__title">An addition to all your fits</h2>
                     <button class="btn btn_white additional__btn">Shop now</button>
+                    <video class="additional__video-bg" loop autoplay muted src="<?php echo carbon_get_theme_option('video')?>"></video>
                 </div>
             </section>
             <section class="deal">

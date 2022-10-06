@@ -8,6 +8,8 @@ use Carbon_Fields\Field;
 
 Container::make('theme_options', 'Theme options')
 ->add_fields( array(
+    Field::make( 'image', 'video', 'Main page video' )
+    ->set_value_type('url'),
     Field::make( 'separator', 'crb_separator', 'Header'  ),
     Field::make( 'image', 'logo', 'Logo' )
     ->set_value_type('url'),
