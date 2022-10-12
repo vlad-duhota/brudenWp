@@ -44,9 +44,12 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
-<div class="woocommerce-options">
 <?php
 if ( woocommerce_product_loop() ) {
+	
+	
+
+	woocommerce_product_loop_start();
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
@@ -54,12 +57,11 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_output_all_notices - 10
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	do_action( 'woocommerce_before_shop_loop' ); ?>
-	
+	 */ ?>
+	 
+	<div class="woocommerce-options"><?php
+		do_action( 'woocommerce_before_shop_loop' ); ?>
 	</div><?php
-
-	woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
@@ -89,7 +91,17 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked wc_no_products_found - 10
 	 */
 	do_action( 'woocommerce_no_products_found' );
-}
+} ?>
+
+<section class="special">
+<div class="container">
+	<h2 class="special__title title_dashed">
+		Special products
+	</h2>
+	<p class="special__text">Register now to get updates on promotions </p>
+	<?php echo do_shortcode('[contact-form-7 id="69" title="Email"]')?>
+</div>
+</section><?php
 
 /**
  * Hook: woocommerce_sidebar.
