@@ -143,6 +143,18 @@ function theme_support() {
 
 
 function bruden_register_wp_sidebars() {
+	/* Cart in header */
+	register_sidebar(
+		array(
+			'id' => 'mini_cart',
+			'name' => 'Header Cart',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="%2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 	/* In aside */
 	register_sidebar(
 		array(

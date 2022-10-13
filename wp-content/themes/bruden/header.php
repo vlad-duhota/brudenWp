@@ -15,7 +15,7 @@
 
             <!-- Styles -->
             <?php wp_head(); ?>
-</head>
+        </head>
 
 <body <?php body_class(); ?>>
     <?php
@@ -50,15 +50,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/user.svg">
                         </a>
                     </div>
-                    <div class="header__right-item header__right-item_cart">
-                        <a href="<?php echo site_url('cart') ?>" class="header__right__link">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/cart.svg">
-                            <span> 0 </span>
-                        </a>
-                        <p class="header__right-price">
-                            <span>&#36</span> 0.00
-                        </p>
-                    </div>
+                    <?php get_sidebar( 'cart' ); ?>
                 </div>
                 <button class="header__burger-btn">
                     <span></span>

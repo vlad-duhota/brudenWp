@@ -209,6 +209,38 @@ button, input[type="submit"]{
             font-weight: 500;
         }
     }
+    
+    .woofc-menu-item {
+        .woofc-menu-item-inner {
+    
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+    
+            i {
+                font-size: 26px;
+                color: #000000;
+            }
+    
+            &::after {
+                position: static;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+            }
+    
+            .woofc-menu-item-inner-subtotal {
+                order: 3;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 14px;
+                color: #000000;
+            }
+        }
+    }
 }
 
 .nav{
@@ -434,6 +466,10 @@ button, input[type="submit"]{
     }
 
     .sidebar {
+        @media(max-width:992px) {
+            width: 50%;
+        }
+
         h3::after {
             content: none;
         }
