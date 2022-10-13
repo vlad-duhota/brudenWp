@@ -23,6 +23,9 @@
   width: 100%;
   margin-top: 40px;
 }
+.woo-main .products.related > h2 {
+  margin-bottom: 30px;
+}
 .woo-main .products.related ul {
   width: 100%;
   display: flex;
@@ -31,6 +34,14 @@
 }
 .woo-main .products.related ul li {
   width: calc(25% - 30px);
+  justify-content: center;
+}
+.woo-main .products.related ul li h2 {
+  width: 100%;
+}
+.woo-main .products.related .add_to_cart_button {
+  top: 51.5%;
+  right: 10px;
 }
 .woo-main .type-product {
   width: calc(100% - 300px);
@@ -63,6 +74,9 @@
   padding: 0 10px 15px;
   position: relative;
   top: 1px;
+}
+.woo-main .woocommerce-tabs ul li a {
+  color: #000000;
 }
 .woo-main .woocommerce-tabs ul li.active {
   border-bottom: 1px solid #5c6ac4;

@@ -155,18 +155,6 @@ function bruden_register_wp_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
-    /* In footer */
-	register_sidebar(
-		array(
-			'id' => 'bruden_foot',
-			'name' => 'Footer',
-			'description' => 'Drag widgets into it to show them on sidebar.',
-			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		)
-	);
     /* In Shop Aside */
 	register_sidebar(
 		array(
@@ -174,6 +162,54 @@ function bruden_register_wp_sidebars() {
 			'name' => 'Shop && Product',
 			'description' => 'Drag widgets into it to show them on sidebar.',
 			'before_widget' => '<div id="%1$s" class="sidebar-woo widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+    /* In footer 1 */
+	register_sidebar(
+		array(
+			'id' => 'bruden_foot_1',
+			'name' => 'Footer 1',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+    /* In footer 2 */
+	register_sidebar(
+		array(
+			'id' => 'bruden_foot_2',
+			'name' => 'Footer 2',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+    /* In footer 3 */
+	register_sidebar(
+		array(
+			'id' => 'bruden_foot_3',
+			'name' => 'Footer 3',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+    /* In footer 4 */
+	register_sidebar(
+		array(
+			'id' => 'bruden_foot_4',
+			'name' => 'Footer 4',
+			'description' => 'Drag widgets into it to show them on sidebar.',
+			'before_widget' => '<div id="%1$s" class="sidebar-foot widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'

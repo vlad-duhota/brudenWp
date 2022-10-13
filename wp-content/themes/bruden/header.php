@@ -36,7 +36,7 @@
           ?>
                 <div class="header__right">
                     <div class="header__right-item">
-                        <a href="<?php echo carbon_get_theme_option('insta_url')?>" class="header__right__link">
+                        <a href="<?php echo carbon_get_theme_option('insta_url')?>" class="header__right__link" target="_blank">
                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/insta.svg">
                         </a>
                     </div>
@@ -46,12 +46,12 @@
                         </button>
                     </div>
                     <div class="header__right-item">
-                        <a class="header__right__link">
+                        <a href="<?php echo site_url('my-account') ?>" class="header__right__link">
                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/user.svg">
                         </a>
                     </div>
                     <div class="header__right-item header__right-item_cart">
-                        <a class="header__right__link">
+                        <a href="<?php echo site_url('cart') ?>" class="header__right__link">
                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/cart.svg">
                             <span> 0 </span>
                         </a>

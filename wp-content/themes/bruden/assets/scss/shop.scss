@@ -24,6 +24,10 @@
             width: 100%;
             margin-top: 40px;
             
+            & > h2 {
+                margin-bottom: 30px;
+            }
+
             $c-gap: 40px;
             ul {
                 width: 100%;
@@ -32,7 +36,17 @@
 
                 li {
                     width: calc(25% - (($c-gap * 3) / 4));
+                    justify-content: center;
+
+                    h2 {
+                        width: 100%;
+                    }
                 }
+            }
+
+            .add_to_cart_button {
+                top: 51.5%;
+                right: 10px;
             }
         }
     }
@@ -71,6 +85,10 @@
                 padding: 0 10px 15px;
                 position: relative;
                 top: 1px;
+
+                a {
+                    color: #000000;
+                }
 
                 &.active {
                     border-bottom: 1px solid #5c6ac4;
