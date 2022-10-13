@@ -16,9 +16,8 @@
         </footer>
     </div>
     <!-- <script 
-  src="https://cdn2.woxo.tech/a.js#633e7143bedc8621852eaa7f" 
-  async data-usrc>
-</script> -->
+        src="https://cdn2.woxo.tech/a.js#633e7143bedc8621852eaa7f" async data-usrc>
+    </script> -->
 <?php wp_footer()?>
 </body>
 </html>
