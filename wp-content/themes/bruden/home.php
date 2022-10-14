@@ -49,10 +49,8 @@
     </section>
     <section class="insta">
         <div class="container">
-        <h2 class="special__title title_dashed">
-            Insta-gallery
-        </h2>
-        <div data-mc-src="da54c84f-049d-4c54-b03a-28fd6224fcbe#instagram"></div>
+            <h2 class="special__title title_dashed">Insta-gallery</h2>
+            <div data-mc-src="da54c84f-049d-4c54-b03a-28fd6224fcbe#instagram"></div>
         </div>
         <div style="height: 50px; margin-top: -50px; background: #fff; position: relative; z-index: 3;"></div>
     </section>
