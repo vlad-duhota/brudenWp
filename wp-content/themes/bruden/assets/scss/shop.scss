@@ -73,7 +73,12 @@
         width: calc(100% - 300px);
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         @media(max-width:992px) {
+            width: 100%;
+        }
+
+        h2 {
             width: 100%;
         }
 
@@ -955,6 +960,131 @@ form.woocommerce-checkout {
         .cart-subtotal,
         .order-total {
             text-transform: uppercase;
+        }
+    }
+    
+    .button {
+        display: block;
+        padding: 14px 25px;
+        background: #292A33;
+        border: 1px solid #292A33;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: 0.15em;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        transition: background .3s, color .3s;
+        
+        &:hover {
+            background: transparent;
+            color: #000000;
+        }
+    }
+}
+
+.woocommerce-account {
+
+    .woocommerce {
+        display: flex;
+    }
+
+    .woocommerce-MyAccount-navigation {
+        width: 200px;
+        padding-right: 20px;
+        border-right: 1px solid #7F7F7F;
+
+        @media(max-width:992px) {
+            width: 100px;
+        }
+
+        ul {
+            li {
+                margin-bottom: 20px;
+                @media(max-width:992px) {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                color: #000000;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .woocommerce-MyAccount-content {
+        width: calc(100% - 200px);
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 1.4;
+        @media(max-width:992px) {
+            width: calc(100% - 100px);
+            padding-left: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .woocommerce-EditAccountForm,
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .clear {
+            display: none;
+        }
+    }
+
+    p.form-row {
+        width: 100%;
+        margin-bottom: 0;
+
+        &:nth-child(-n+2) {
+            width: calc(50% - 10px);
+            @media(max-width:992px) {
+                width: 100%;
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        .select2-selection--single {
+            width: 100%;
+            height: 40px;
+            padding: 5px 10px;
+            border: 1px solid #7F7F7F;
+            color: #292A33;
+
+            &::placeholder {
+                color: #7F7F7F;
+            }
+
+            .select2-selection__arrow {
+                height: 36px;
+            }
+        }
+    }
+
+    fieldset {
+        padding: 10px;
+
+        .form-row {
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: calc(50% - 10px);
+                @media(max-width:992px) {
+                    width: 100%;
+                }
+            }
         }
     }
     

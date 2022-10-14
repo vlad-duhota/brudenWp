@@ -7,7 +7,26 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('theme_options', 'Theme options')
-->add_fields( array(
+->add_tab( __('Global Settings'), array(
+    Field::make( 'separator', 'crb_separator', 'Header'  ),
+    Field::make( 'image', 'logo', 'Logo' )
+    ->set_value_type('url'),
+    Field::make( 'text', 'insta_url', 'Instagram Url' ),
+    Field::make( 'separator', 'crb_separator_2', 'Footer'  ),
+    Field::make( 'text', 'insta_name', 'Instagram Profile Name' ),
+    Field::make( 'separator', 'crb_separator_3', 'Contacts'  ),
+    Field::make( 'text', 'street', 'Street' )
+    ->set_width(50),
+    Field::make( 'text', 'street_url', 'Street Url' )
+    ->set_width(50),
+    Field::make( 'text', 'phone', 'phone number' )
+    ->set_width(50),
+    Field::make( 'text', 'phone_url', 'phone number without any symbols and spaces' )
+    ->set_width(50),
+    Field::make( 'text', 'email', 'email' )
+    ->set_width(100),
+) )
+->add_tab( __('Home Page'), array(
     Field::make( 'separator', 'crb_separator_titles', 'Titles'  ),
     Field::make( 'text', 'title_1', 'Categories title' ),
     Field::make( 'text', 'title_2', 'Deal Of The Week title' ),
@@ -41,23 +60,6 @@ Container::make('theme_options', 'Theme options')
     Field::make( 'image', 'fits_img', 'Fits img' )
     ->set_width(20)
     ->set_value_type('url'),
-    Field::make( 'separator', 'crb_separator', 'Header'  ),
-    Field::make( 'image', 'logo', 'Logo' )
-    ->set_value_type('url'),
-    Field::make( 'text', 'insta_url', 'Instagram Url' ),
-    Field::make( 'separator', 'crb_separator_2', 'Footer'  ),
-    Field::make( 'text', 'insta_name', 'Instagram Profile Name' ),
-    Field::make( 'separator', 'crb_separator_3', 'Contacts'  ),
-    Field::make( 'text', 'street', 'Street' )
-    ->set_width(50),
-    Field::make( 'text', 'street_url', 'Street Url' )
-    ->set_width(50),
-    Field::make( 'text', 'phone', 'phone number' )
-    ->set_width(50),
-    Field::make( 'text', 'phone_url', 'phone number without any symbols and spaces' )
-    ->set_width(50),
-    Field::make( 'text', 'email', 'email' )
-    ->set_width(100),
 ) );
 
 

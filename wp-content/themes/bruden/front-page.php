@@ -139,12 +139,12 @@ Template Name: Home page
                                                 <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
                                                 <div class="deal__cols">
                                                     <button class="deal__btn">Add to cart</button>
-                                                    <button class="deal__heart">
+                                                    <a href="<?php echo site_url('wishlist') ?>" class="deal__heart">
                                                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
-                                                    </button>
-                                                    <button class="deal__seen">
+                                                    </a>
+                                                    <a href="<?php the_permalink() ?>" class="deal__seen">
                                                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

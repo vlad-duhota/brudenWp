@@ -78,7 +78,7 @@ button, input[type="submit"]{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 99;
     background: #fff;
     .container{
         display: flex;
@@ -207,6 +207,31 @@ button, input[type="submit"]{
         }
         &-price{
             font-weight: 500;
+        }
+    }
+
+    &__search {
+        position: absolute;
+        bottom: -35px;
+        right: 170px;
+
+        form {
+            display: flex;
+
+            input {
+                height: 30px;
+                padding: 5px 10px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+
+                &[type=submit] {
+                    background: #000000;
+                    color: #ffffff;
+
+                    &:hover {
+                        opacity: .85;
+                    }
+                }
+            }
         }
     }
     
