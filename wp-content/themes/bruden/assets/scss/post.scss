@@ -99,18 +99,15 @@ $grey: #7F7F7F;
 
             img {
                 display: block;
-                height: auto;
-                width: 100%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
             }
         }
     }
     &__content{
-        border-width: 1px 1px 1px 0px;
-        border-style: solid;
-        border-color: $grey;
         padding: 25px;
         @media(max-width:578px){
-            border-width: 1px 1px 1px 1px;
             margin-top: 25px;
         }
     }

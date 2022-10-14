@@ -62,7 +62,7 @@ Template Name: Home page
             <section class="category">
                 <div class="container">
                     <h2 class="category__title title_dashed">
-                        Shop by category
+                        <?php echo carbon_get_theme_option('title_1')?>
                     </h2>
                     <div class="category-swiper swiper">
                         <div class="swiper-wrapper category-swiper__wrapper"><?php
@@ -99,15 +99,15 @@ Template Name: Home page
             </section>
             <section class="additional">
                 <div class="container">
-                    <h2 class="additional__title">An addition to all your fits</h2>
-                    <button class="btn btn_white additional__btn">Shop now</button>
+                    <h2 class="additional__title">    <?php echo carbon_get_theme_option('banner_1_title')?></h2>
+                    <a href="<?php echo site_url()?>/shop" class="btn btn_white additional__btn">Shop now</a>
                     <video class="additional__video-bg" loop autoplay muted src="<?php echo carbon_get_theme_option('video')?>"></video>
                 </div>
             </section>
             <section class="deal">
                 <div class="container">
                     <h2 class="deal__title title_dashed">
-                        Deal of the week
+                    <?php echo carbon_get_theme_option('title_2')?>
                     </h2>
                     <div class="deal-swiper swiper">
                         <!-- Additional required wrapper -->
@@ -163,20 +163,20 @@ Template Name: Home page
             </section>
             <section class="banner">
                 <div class="container">
-                    <div class="banner__left banner__part" style="background: url(<?php echo get_template_directory_uri()?>/assets/img/banner_1.png) center / cover no-repeat;">
-                        <h2 class="banner__title">New arrival <span>Exclusive Denisha Bruce Red Backpack Launch</span></h2>
-                        <button class="btn">Shop now</button>
+                    <div class="banner__left banner__part" style="background: url(<?php echo carbon_get_theme_option('banner_2_img_1')?>) center / cover no-repeat;">
+                        <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_1')?> <span><?php echo carbon_get_theme_option('banner_2_text_1')?></span></h2>
+                        <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
                     </div>
-                    <div class="banner__right banner__part" style="background: url(<?php echo get_template_directory_uri()?>/assets/img/banner_2.png) center / cover no-repeat;">
-                        <h2 class="banner__title">An addition to all your fits</h2>
-                        <button class="btn">Shop now</button>
+                    <div class="banner__right banner__part" style="background: url(<?php echo carbon_get_theme_option('banner_2_img_2')?>) center / cover no-repeat;">
+                        <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_2')?></h2>
+                        <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
                     </div>
                 </div>
             </section>
             <section class="news">
                 <div class="container">
                     <h2 class="news__title title_dashed">
-                        Latest news
+                        <?php echo carbon_get_theme_option('title_3')?>
                     </h2>
                     <div class="news-swiper swiper">
                         <!-- Additional required wrapper -->
@@ -214,18 +214,18 @@ Template Name: Home page
                 <div class="container">
                   <div class="fits__inner">
                         <div class="fits__content">
-                            <h2 class="fits__title">Fits any style</h2>
-                            <p class="fits__text">Precise fit on sliding buckle with no holes</p>
-                            <button class="btn btn_white fits__btn">Shop now</button>
+                            <h2 class="fits__title"><?php echo carbon_get_theme_option('fits_title')?></h2>
+                            <p class="fits__text"><?php echo carbon_get_theme_option('fits_text')?></p>
+                            <a href="<?php echo site_url()?>/shop" class="btn btn_white fits__btn">Shop now</a>
                         </div>
-                        <div class="fits__img" style="background: url(<?php echo get_template_directory_uri()?>/assets/img/fits_1.png) center / cover no-repeat;">
+                        <div class="fits__img" style="background: url(<?php echo carbon_get_theme_option('fits_img')?>) center / cover no-repeat;">
                   </div>
                 </div>
             </section>
             <section class="special">
                 <div class="container">
                     <h2 class="special__title title_dashed">
-                        Special products
+                        <?php echo carbon_get_theme_option('title_4')?>
                     </h2>
                     <p class="special__text">Register now to get updates on promotions </p>
                     <?php echo do_shortcode('[contact-form-7 id="69" title="Email"]')?>

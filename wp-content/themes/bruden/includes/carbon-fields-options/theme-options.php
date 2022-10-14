@@ -8,7 +8,38 @@ use Carbon_Fields\Field;
 
 Container::make('theme_options', 'Theme options')
 ->add_fields( array(
+    Field::make( 'separator', 'crb_separator_titles', 'Titles'  ),
+    Field::make( 'text', 'title_1', 'Categories title' ),
+    Field::make( 'text', 'title_2', 'Deal Of The Week title' ),
+    Field::make( 'text', 'title_3', 'Latest News title' ),
+    Field::make( 'text', 'title_4', 'Special Products title' ),
+    Field::make( 'separator', 'crb_separator_banner_1', 'First banner'  ),
+    Field::make( 'text', 'banner_1_title', 'Banner title' )
+    ->set_width(80),
     Field::make( 'image', 'video', 'Main page video' )
+    ->set_width(20)
+    ->set_value_type('url'),
+    Field::make( 'separator', 'crb_separator_banner_2', 'Second banner'  ),
+    Field::make( 'text', 'banner_2_title_1', 'Banner title 1' )
+    ->set_width(40),
+    Field::make( 'text', 'banner_2_text_1', 'Banner 1 text' )
+    ->set_width(40),
+    Field::make( 'image', 'banner_2_img_1', 'Banner 1 img' )
+    ->set_width(20)
+    ->set_value_type('url'),
+    Field::make( 'separator', 'crb_separator_banner_sep', 'Next part of second banner'  ),
+    Field::make( 'text', 'banner_2_title_2', 'Banner title 2' )
+    ->set_width(80),
+    Field::make( 'image', 'banner_2_img_2', 'Banner 2 img' )
+    ->set_width(20)
+    ->set_value_type('url'),
+    Field::make( 'separator', 'crb_separator_fits', 'Fits section'  ),
+    Field::make( 'text', 'fits_title', 'Fits title' )
+    ->set_width(40),
+    Field::make( 'text', 'fits_text', 'Fits text' )
+    ->set_width(40),
+    Field::make( 'image', 'fits_img', 'Fits img' )
+    ->set_width(20)
     ->set_value_type('url'),
     Field::make( 'separator', 'crb_separator', 'Header'  ),
     Field::make( 'image', 'logo', 'Logo' )

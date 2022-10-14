@@ -28,7 +28,7 @@
             </div>
             <?php get_sidebar( 'aside' ); ?>
         </section>
-        <section class="latest">
+        <section class="latest" style="padding-bottom: 45px">
             <div class="container">
                 <h2 class="latest__title title_dashed">Latest Products</h2>
                 <div class="latest-swiper swiper">
