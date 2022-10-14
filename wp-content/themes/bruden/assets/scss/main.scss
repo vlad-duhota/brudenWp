@@ -409,7 +409,8 @@ $grey: #7F7F7F;
         display: flex;
         align-items: center;
     }
-    &__btn{
+    &__btn,
+    .button{
         background: #000;
         color: #fff;
         border: none;
@@ -429,6 +430,9 @@ $grey: #7F7F7F;
             background: #fff;
             color: #000;
         }
+    }
+    .added_to_cart {
+        display: none;
     }
     &__heart,
     &__seen{

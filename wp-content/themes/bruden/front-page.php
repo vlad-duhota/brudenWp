@@ -137,8 +137,15 @@ Template Name: Home page
                                                 </div>
                                                 <p class="deal__price">C$ 99.99</p>
                                                 <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
-                                                <div class="deal__cols">
-                                                    <button class="deal__btn">Add to cart</button>
+                                                <div class="deal__cols"><?php
+                                                /**
+                                                    * Hook: woocommerce_after_shop_loop_item.
+                                                    *
+                                                    * @hooked woocommerce_template_loop_product_link_close - 5
+                                                    * @hooked woocommerce_template_loop_add_to_cart - 10
+                                                    */
+                                                    do_action( 'woocommerce_after_shop_loop_item' ); ?>
+                                                    <!-- <button class="deal__btn">Add to cart</button> -->
                                                     <a href="<?php echo site_url('wishlist') ?>" class="deal__heart">
                                                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
                                                     </a>
