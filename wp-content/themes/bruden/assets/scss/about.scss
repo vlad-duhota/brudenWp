@@ -24,9 +24,10 @@
         }
     }
     &__img{
-        aspect-ratio: 1;
         display: block;
+        height: 50vh;
         width: 100%;
+        object-fit: cover;
     }
     &__uptitle{
         margin-bottom: 15px;

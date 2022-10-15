@@ -33,9 +33,11 @@
   }
 }
 .about__img {
-  aspect-ratio: 1;
   display: block;
+  height: 50vh;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__uptitle {
   margin-bottom: 15px;
