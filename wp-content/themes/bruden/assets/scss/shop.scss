@@ -986,6 +986,11 @@ form.woocommerce-checkout {
 
     .woocommerce {
         display: flex;
+        flex-wrap: wrap;
+
+        h2 {
+            width: 100%;
+        }
     }
 
     .woocommerce-MyAccount-navigation {
@@ -1029,6 +1034,10 @@ form.woocommerce-checkout {
         }
     }
 
+    .woocommerce-form-login {
+        width: 100%;
+    }
+
     .woocommerce-EditAccountForm,
     fieldset {
         display: flex;
@@ -1056,6 +1065,10 @@ form.woocommerce-checkout {
             margin-bottom: 10px;
         }
 
+        .woocommerce-form__label {
+            margin-top: 10px;
+        }
+
         input,
         .select2-selection--single {
             width: 100%;
@@ -1071,6 +1084,16 @@ form.woocommerce-checkout {
             .select2-selection__arrow {
                 height: 36px;
             }
+        }
+
+        input[type=checkbox] {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+        }
+
+        .woocommerce-LostPassword {
+            margin-top: 10px;
         }
     }
 

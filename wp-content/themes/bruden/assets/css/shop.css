@@ -915,6 +915,10 @@ form.woocommerce-checkout .button:hover {
 
 .woocommerce-account .woocommerce {
   display: flex;
+  flex-wrap: wrap;
+}
+.woocommerce-account .woocommerce h2 {
+  width: 100%;
 }
 .woocommerce-account .woocommerce-MyAccount-navigation {
   width: 200px;
@@ -955,6 +959,9 @@ form.woocommerce-checkout .button:hover {
     font-size: 12px;
   }
 }
+.woocommerce-account .woocommerce-form-login {
+  width: 100%;
+}
 .woocommerce-account .woocommerce-EditAccountForm,
 .woocommerce-account fieldset {
   display: flex;
@@ -981,6 +988,9 @@ form.woocommerce-checkout .button:hover {
   display: block;
   margin-bottom: 10px;
 }
+.woocommerce-account p.form-row .woocommerce-form__label {
+  margin-top: 10px;
+}
 .woocommerce-account p.form-row input,
 .woocommerce-account p.form-row .select2-selection--single {
   width: 100%;
@@ -1002,6 +1012,14 @@ form.woocommerce-checkout .button:hover {
 .woocommerce-account p.form-row input .select2-selection__arrow,
 .woocommerce-account p.form-row .select2-selection--single .select2-selection__arrow {
   height: 36px;
+}
+.woocommerce-account p.form-row input[type=checkbox] {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+}
+.woocommerce-account p.form-row .woocommerce-LostPassword {
+  margin-top: 10px;
 }
 .woocommerce-account fieldset {
   padding: 10px;
