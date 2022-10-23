@@ -106,6 +106,12 @@
     padding: 0;
   }
 }
+.latest .swiper-grid-column > .swiper-wrapper {
+  flex-direction: row;
+}
+.latest__swiper-slide {
+  margin-top: 0 !important;
+}
 .latest__swiper-slide a {
   display: block;
   width: 150px;

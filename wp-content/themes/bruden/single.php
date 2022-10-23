@@ -57,7 +57,12 @@
                                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
                                             <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
                                         </div>
-                                        <p class="latest__price">C$ 99.99</p>
+                                        <?php
+                                            $price = get_post_meta( get_the_ID(), '_price', true);
+                                            if( $price ) :
+                                        ?>
+                                        <p class="latest__price">C$<?php echo $price ?></p>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             <?php endwhile;

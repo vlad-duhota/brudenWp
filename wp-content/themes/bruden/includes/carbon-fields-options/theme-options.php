@@ -35,7 +35,7 @@ Container::make('theme_options', 'Theme options')
     Field::make( 'separator', 'crb_separator_banner_1', 'First banner'  ),
     Field::make( 'text', 'banner_1_title', 'Banner title' )
     ->set_width(80),
-    Field::make( 'image', 'video', 'Main page video' )
+    Field::make( 'image', 'underlay', 'Main page image' )
     ->set_width(20)
     ->set_value_type('url'),
     Field::make( 'separator', 'crb_separator_banner_2', 'Second banner'  ),

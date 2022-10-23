@@ -101,7 +101,8 @@ Template Name: Home page
                 <div class="container">
                     <h2 class="additional__title">    <?php echo carbon_get_theme_option('banner_1_title')?></h2>
                     <a href="<?php echo site_url()?>/shop" class="btn btn_white additional__btn">Shop now</a>
-                    <video class="additional__video-bg" loop autoplay muted src="<?php echo carbon_get_theme_option('video')?>"></video>
+                    <!-- <video class="additional__video-bg" loop autoplay muted src="<?php // echo carbon_get_theme_option('video')?>"></video> -->
+                    <img src="<?php echo carbon_get_theme_option('underlay') ?>" alt="" class="additional__video-bg">
                 </div>
             </section>
             <section class="deal">
@@ -123,37 +124,40 @@ Template Name: Home page
                                 while ( have_posts() ) :
                                     the_post(); ?>
                                         <div class="swiper-slide deal__swiper-slide">
-                                            <a href="<?php the_permalink() ?>" class="deal__img">
-                                                <?php echo get_the_post_thumbnail( null, 'thumbnail_520x680' ) ?>
+                                            <a href="<?php the_permalink() ?>">
+                                                <div class="deal__img">
+                                                    <?php echo get_the_post_thumbnail( null, 'thumbnail_520x680' ) ?>
+                                                </div>
+                                                <div class="deal__content">
+                                                    <h4 class="deal__name"><?php the_title() ?></h4>
+                                                    <div class="deal__stars">
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
+                                                    </div>
+                                                    <?php
+                                                        $price = get_post_meta( get_the_ID(), '_price', true);
+                                                        if( $price ) :
+                                                    ?>
+                                                    <p class="deal__price">C$<?php echo $price ?></p>
+                                                    <?php endif; ?>
+                                                    <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
+                                                    <div class="deal__cols"><?php
+                                                    /**
+                                                        * Hook: woocommerce_after_shop_loop_item.
+                                                        *
+                                                        * @hooked woocommerce_template_loop_product_link_close - 5
+                                                        * @hooked woocommerce_template_loop_add_to_cart - 10
+                                                        */
+                                                        do_action( 'woocommerce_after_shop_loop_item' ); ?>
+                                                        <a href="<?php echo site_url('wishlist') ?>" class="deal__heart">
+                                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </a>
-                                            <div class="deal__content">
-                                                <h4 class="deal__name"><?php the_title() ?></h4>
-                                                <div class="deal__stars">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/star.png">
-                                                </div>
-                                                <p class="deal__price">C$ 99.99</p>
-                                                <p class="deal__text">Bruden's Backpack will give all your essentials a home while still feeling comfortable and having a... </p>
-                                                <div class="deal__cols"><?php
-                                                /**
-                                                    * Hook: woocommerce_after_shop_loop_item.
-                                                    *
-                                                    * @hooked woocommerce_template_loop_product_link_close - 5
-                                                    * @hooked woocommerce_template_loop_add_to_cart - 10
-                                                    */
-                                                    do_action( 'woocommerce_after_shop_loop_item' ); ?>
-                                                    <!-- <button class="deal__btn">Add to cart</button> -->
-                                                    <a href="<?php echo site_url('wishlist') ?>" class="deal__heart">
-                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/heart.svg">
-                                                    </a>
-                                                    <a href="<?php the_permalink() ?>" class="deal__seen">
-                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/eye.svg">
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
                                 <?php endwhile;
                                     wp_reset_query();

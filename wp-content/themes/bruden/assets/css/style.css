@@ -794,7 +794,7 @@ section.category img {
   transition: box-shadow 0.3s;
 }
 .category__swiper-slide:hover {
-  box-shadow: 0px 6px 34px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .category-swiper {

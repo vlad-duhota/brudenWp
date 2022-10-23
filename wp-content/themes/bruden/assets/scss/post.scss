@@ -98,7 +98,12 @@ $grey: #7F7F7F;
             padding: 0;
         }
     }
+    .swiper-grid-column>.swiper-wrapper {
+        flex-direction: row;
+    }
     &__swiper-slide {
+        margin-top: 0 !important;
+
         a {
             display: block;
             width: 150px;

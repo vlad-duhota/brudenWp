@@ -93,6 +93,9 @@ const swiper4 = new Swiper('.deal-swiper', {
 const swiper5 = new Swiper('.latest-swiper', {
     loop: true,
     slidesPerView: 3,
+    grid: {
+      rows: 2,
+    },
     spaceBetween: 40,
     speed: 600,
     navigation: {
