@@ -101,8 +101,7 @@ Template Name: Home page
                 <div class="container">
                     <h2 class="additional__title">    <?php echo carbon_get_theme_option('banner_1_title')?></h2>
                     <a href="<?php echo site_url()?>/shop" class="btn btn_white additional__btn">Shop now</a>
-                    <!-- <video class="additional__video-bg" loop autoplay muted src="<?php // echo carbon_get_theme_option('video')?>"></video> -->
-                    <img src="<?php echo carbon_get_theme_option('underlay') ?>" alt="" class="additional__video-bg">
+                    <?php echo wp_get_attachment_image( carbon_get_theme_option('underlay'), 'full' ) ?>
                 </div>
             </section>
             <section class="deal">

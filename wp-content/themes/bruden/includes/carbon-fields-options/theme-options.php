@@ -34,8 +34,7 @@ Container::make('theme_options', 'Theme options')
     Field::make( 'text', 'banner_1_title', 'Banner title' )
     ->set_width(80),
     Field::make( 'image', 'underlay', 'Main page image' )
-    ->set_width(20)
-    ->set_value_type('url'),
+    ->set_width(20),
     Field::make( 'separator', 'crb_separator_banner_2', 'Second banner'  ),
     Field::make( 'text', 'banner_2_title_1', 'Banner title 1' )
     ->set_width(40),
