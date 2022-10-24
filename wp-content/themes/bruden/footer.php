@@ -2,9 +2,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__col">
-                    <a href="<?php echo get_site_url()?>" class="footer__logo logo">
-                        <img src="<?php echo carbon_get_theme_option('logo')?>">
-                    </a>
+                    <?php echo get_custom_logo(); ?>
                     <a href="<?php echo carbon_get_theme_option('insta_url')?>" class="footer__insta" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/insta.svg">
                         <?php echo carbon_get_theme_option('insta_name')?>

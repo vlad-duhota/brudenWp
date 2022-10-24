@@ -29,9 +29,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <a href="<?php echo get_site_url()?>" class="logo">
-                    <img src="<?php echo carbon_get_theme_option('logo')?>">
-                </a>
+                <?php echo get_custom_logo(); ?>
                 <?php
                     wp_nav_menu( array( 
                         'theme_location' => 'main_menu', 
