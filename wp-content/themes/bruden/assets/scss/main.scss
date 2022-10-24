@@ -146,7 +146,9 @@ $grey: #7F7F7F;
         left: 0;
     }
     .container{
+        width: 100%;
         height: 70vh;
+        overflow: hidden;
         position: relative;
     }
     &__title{
@@ -169,6 +171,11 @@ $grey: #7F7F7F;
             background: #000;
             color: #fff;
         }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
