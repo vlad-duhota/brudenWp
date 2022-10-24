@@ -59,16 +59,14 @@ Container::make('theme_options', 'Theme options')
     Field::make( 'text', 'banner_2_title_2', 'Banner title 2' )
     ->set_width(80),
     Field::make( 'image', 'banner_2_img_2', 'Banner 2 img' )
-    ->set_width(20)
-    ->set_value_type('url'),
+    ->set_width(20),
     Field::make( 'separator', 'crb_separator_fits', 'Fits section'  ),
     Field::make( 'text', 'fits_title', 'Fits title' )
     ->set_width(40),
     Field::make( 'text', 'fits_text', 'Fits text' )
     ->set_width(40),
     Field::make( 'image', 'fits_img', 'Fits img' )
-    ->set_width(20)
-    ->set_value_type('url'),
+    ->set_width(20),
 ) );
 
 

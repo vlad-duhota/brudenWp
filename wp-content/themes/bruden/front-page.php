@@ -160,13 +160,16 @@ Template Name: Home page
             <section class="banner">
                 <div class="container">
                     <?php
-                        $banner_l = wp_get_attachment_url( carbon_get_theme_option('banner_2_img_1') );
+                        $banner_l = wp_get_attachment_url( carbon_get_theme_option('banner_2_img_1'), 'full' );
+                    ?>
+                     <?php
+                        $banner_2 = wp_get_attachment_url( carbon_get_theme_option('banner_2_img_2'), 'full' );
                     ?>
                     <div class="banner__left banner__part" style="background: url(<?php echo $banner_l ?>) center / cover no-repeat;">
                         <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_1')?> <span><?php echo carbon_get_theme_option('banner_2_text_1')?></span></h2>
                         <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
                     </div>
-                    <div class="banner__right banner__part" style="background: url(<?php echo carbon_get_theme_option('banner_2_img_2')?>) center / cover no-repeat;">
+                    <div class="banner__right banner__part" style="background: url(<?php echo $banner_2 ?>) center / cover no-repeat;">
                         <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_2')?></h2>
                         <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
                     </div>
@@ -212,12 +215,15 @@ Template Name: Home page
             <section class="fits">
                 <div class="container">
                   <div class="fits__inner">
+                  <?php
+                        $fits_img = wp_get_attachment_url( carbon_get_theme_option('fits_img'), 'full' );
+                    ?>
                         <div class="fits__content">
                             <h2 class="fits__title"><?php echo carbon_get_theme_option('fits_title')?></h2>
                             <p class="fits__text"><?php echo carbon_get_theme_option('fits_text')?></p>
                             <a href="<?php echo site_url()?>/shop" class="btn btn_white fits__btn">Shop now</a>
                         </div>
-                        <div class="fits__img" style="background: url(<?php echo carbon_get_theme_option('fits_img')?>) center / cover no-repeat;">
+                        <div class="fits__img" style="background: url(<?php echo $fits_img?>) center / cover no-repeat;">
                   </div>
                 </div>
             </section>

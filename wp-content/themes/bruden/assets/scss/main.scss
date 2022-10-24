@@ -150,6 +150,23 @@ $grey: #7F7F7F;
         height: 70vh;
         overflow: hidden;
         position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            background: rgba($color: #fff, $alpha: .13);
+            box-shadow: 0 15px 25px rgba(129, 124, 124, 0.13);
+            backdrop-filter: blur(3px);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        &:hover::before{
+            opacity: 1;
+        }
     }
     &__title{
         color: #fff;
