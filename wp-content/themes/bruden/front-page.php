@@ -173,7 +173,10 @@ Template Name: Home page
             </section>
             <section class="banner">
                 <div class="container">
-                    <div class="banner__left banner__part" style="background: url(<?php echo carbon_get_theme_option('banner_2_img_1')?>) center / cover no-repeat;">
+                    <?php
+                        $banner_l = wp_get_attachment_url( carbon_get_theme_option('banner_2_img_1') );
+                    ?>
+                    <div class="banner__left banner__part" style="background: url(<?php echo $banner_l ?>) center / cover no-repeat;">
                         <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_1')?> <span><?php echo carbon_get_theme_option('banner_2_text_1')?></span></h2>
                         <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
                     </div>

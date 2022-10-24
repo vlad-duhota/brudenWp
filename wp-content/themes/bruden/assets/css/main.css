@@ -132,7 +132,9 @@
   left: 0;
 }
 .additional .container {
+  width: 100%;
   height: 70vh;
+  overflow: hidden;
   position: relative;
 }
 .additional__title {
@@ -155,6 +157,12 @@
 .additional__btn:hover {
   background: #000;
   color: #fff;
+}
+.additional img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .banner {
