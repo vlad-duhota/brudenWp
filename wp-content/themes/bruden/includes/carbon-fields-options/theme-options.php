@@ -50,14 +50,18 @@ Container::make('theme_options', 'Theme options')
     ->set_width(20),
     Field::make( 'separator', 'crb_separator_banner_2', 'Second banner'  ),
     Field::make( 'text', 'banner_2_title_1', 'Banner title 1' )
-    ->set_width(40),
+    ->set_width(28),
     Field::make( 'text', 'banner_2_text_1', 'Banner 1 text' )
-    ->set_width(40),
+    ->set_width(28),
+    Field::make( 'text', 'banner_2_link_1', 'Banner 1 link' )
+    ->set_width(28),
     Field::make( 'image', 'banner_2_img_1', 'Banner 1 img' )
-    ->set_width(20),
+    ->set_width(16),
     Field::make( 'separator', 'crb_separator_banner_sep', 'Next part of second banner'  ),
     Field::make( 'text', 'banner_2_title_2', 'Banner title 2' )
-    ->set_width(80),
+    ->set_width(50),
+    Field::make( 'text', 'banner_2_link_2', 'Banner 2 link' )
+    ->set_width(30),
     Field::make( 'image', 'banner_2_img_2', 'Banner 2 img' )
     ->set_width(20),
     Field::make( 'separator', 'crb_separator_fits', 'Fits section'  ),

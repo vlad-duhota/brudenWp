@@ -296,9 +296,11 @@ button, input[type="submit"]{
         }
     }
     li{
+        width: fit-content;
+
         @media(max-width:992px){
             &:not(:last-child){
-                margin-bottom: 25px;
+                margin: 0 auto 25px;
             }
         }
         &.current-menu-item{

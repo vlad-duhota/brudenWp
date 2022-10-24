@@ -19,28 +19,27 @@ Template Name: Home page
                     <div class="swiper-wrapper hero-swiper__wrapper">
                       <!-- Slides -->
 
-                      <?php if(! empty($slider)) : ?>
-            <?php foreach($slider as $slide) : ?>
-                <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
-                        <div class="hero__content">
-                        <?php if(!empty($slide['hero_slider_tags'])) : ?>
-                            <ul class="hero__cats">
-                                <?php foreach($slide['hero_slider_tags'] as $tag) : ?>
-                                    <li class="hero__cats-item"><?php echo $tag['hero_slider_tag']?></li>
-                                <?php endforeach ?>
-                            </ul>
-                        <?php endif ?>
-                        <h1 class="hero__title"><?php echo $slide['hero_slider_title']?></h1>
-                        <p class="hero__text"><?php echo $slide['hero_slider_text']?></p>
-                        <button class="btn hero__btn">Shop now</button>
-                </div>
-                    <?php echo wp_get_attachment_image($slide['hero_slider_img'], 'full')?>
-                    <!-- <img class="hero__img" src="<?php echo get_template_directory_uri() ?>/assets/img/hero_1.png"> -->
-                </div></div> 
-            <?php endforeach ?>
-            <?php endif ?>
+                    <?php if(! empty($slider)) : ?>
+                    <?php foreach($slider as $slide) : ?>
+                        <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
+                            <div class="hero__content">
+                            <?php if(!empty($slide['hero_slider_tags'])) : ?>
+                                <ul class="hero__cats">
+                                    <?php foreach($slide['hero_slider_tags'] as $tag) : ?>
+                                        <li class="hero__cats-item"><?php echo $tag['hero_slider_tag']?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <h1 class="hero__title"><?php echo $slide['hero_slider_title']?></h1>
+                            <p class="hero__text"><?php echo $slide['hero_slider_text']?></p>
+                            <a href="<?php echo get_site_url(null, 'shop') ?>" class="btn hero__btn">Shop now</a>
+                        </div>
+                        <?php echo wp_get_attachment_image($slide['hero_slider_img'], 'full')?>
+                    </div></div> 
+                    <?php endforeach ?>
+                    <?php endif ?>
                     <!-- If we need pagination -->
-                </div>
+                    </div>
                 </div>
                 <div class="hero-swiper__pagination"></div>
               </div>
@@ -167,11 +166,11 @@ Template Name: Home page
                     ?>
                     <div class="banner__left banner__part" style="background: url(<?php echo $banner_l ?>) center / cover no-repeat;">
                         <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_1')?> <span><?php echo carbon_get_theme_option('banner_2_text_1')?></span></h2>
-                        <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
+                        <a href="<?php echo site_url()?>/product/<?php echo carbon_get_theme_option('banner_2_link_1') ?>" class="btn">Shop now</a>
                     </div>
                     <div class="banner__right banner__part" style="background: url(<?php echo $banner_2 ?>) center / cover no-repeat;">
                         <h2 class="banner__title"><?php echo carbon_get_theme_option('banner_2_title_2')?></h2>
-                        <a href="<?php echo site_url()?>/shop" class="btn">Shop now</a>
+                        <a href="<?php echo site_url()?>/product/<?php echo carbon_get_theme_option('banner_2_link_2') ?>" class="btn">Shop now</a>
                     </div>
                 </div>
             </section>

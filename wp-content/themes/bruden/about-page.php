@@ -26,7 +26,9 @@ Template Name: About us page
                     <?php echo carbon_get_post_meta($page_id, 'about_text_2')?>
                     </p>
                 </div>
-                <img src="<?php echo carbon_get_post_meta($page_id, 'about_img')?>" class="about__img">
+                <div class="about__img">
+                    <?php echo wp_get_attachment_image( carbon_get_post_meta($page_id, 'about_img'), 'full' ) ?>
+                </div>
             </div>
         </div>
     </section>

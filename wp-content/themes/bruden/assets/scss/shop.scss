@@ -1174,6 +1174,14 @@ form.woocommerce-checkout {
 
     .woocommerce-form-login {
         width: 100%;
+
+        .woocommerce-form-row:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .lost_password {
+            margin-top: 10px;
+        }
     }
 
     .woocommerce-EditAccountForm,
