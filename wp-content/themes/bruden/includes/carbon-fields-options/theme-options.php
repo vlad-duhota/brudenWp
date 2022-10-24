@@ -25,6 +25,19 @@ Container::make('theme_options', 'Theme options')
     ->set_width(100),
 ) )
 ->add_tab( __('Home Page'), array(
+    Field::make( 'separator', 'crb_separator_hero', 'Hero'  ),
+    Field::make( 'complex', 'hero_slider', 'slider' )
+    ->add_fields( array(
+        Field::make( 'image', 'hero_slider_img', 'Img' ),
+        Field::make( 'text', 'hero_slider_title', 'Title' ),
+        Field::make( 'text', 'hero_slider_text', 'Text' ),
+        Field::make( 'complex', 'hero_slider_tags', 'Tags' )
+        ->add_fields( array(
+            Field::make( 'text', 'hero_slider_tag', 'Tag' ),
+        ) )
+    ->set_max(3),
+    ) )
+    ->set_max(6),
     Field::make( 'separator', 'crb_separator_titles', 'Titles'  ),
     Field::make( 'text', 'title_1', 'Categories title' ),
     Field::make( 'text', 'title_2', 'Deal Of The Week title' ),

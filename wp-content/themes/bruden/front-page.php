@@ -6,6 +6,7 @@ Template Name: Home page
 
 <?php 
     $page_id = get_the_ID();
+    $slider = carbon_get_theme_option('hero_slider');
 ?>
 
 <?php get_header(); ?>
@@ -17,44 +18,29 @@ Template Name: Home page
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper hero-swiper__wrapper">
                       <!-- Slides -->
-                      <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
+
+                      <?php if(! empty($slider)) : ?>
+            <?php foreach($slider as $slide) : ?>
+                <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
                         <div class="hero__content">
-                        <ul class="hero__cats">
-                            <li class="hero__cats-item">bags</li>
-                            <li class="hero__cats-item">sunglasses</li>
-                            <li class="hero__cats-item">belts</li>
-                        </ul>
-                        <h1 class="hero__title">Exclusive accessories <br> for connoisseurs of style</h1>
-                        <p class="hero__text">Designed in Montreal, Bruden's Backpack embodies luxury fashion while keeping comfort and versatility</p>
+                        <?php if(!empty($slide['hero_slider_tags'])) : ?>
+                            <ul class="hero__cats">
+                                <?php foreach($slide['hero_slider_tags'] as $tag) : ?>
+                                    <li class="hero__cats-item"><?php echo $tag['hero_slider_tag']?></li>
+                                <?php endforeach ?>
+                            </ul>
+                        <?php endif ?>
+                        <h1 class="hero__title"><?php echo $slide['hero_slider_title']?></h1>
+                        <p class="hero__text"><?php echo $slide['hero_slider_text']?></p>
                         <button class="btn hero__btn">Shop now</button>
                 </div>
-                    <img class="hero__img" src="<?php echo get_template_directory_uri() ?>/assets/img/hero_1.png"></div></div>
-                    <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
-                        <div class="hero__content">
-                        <ul class="hero__cats">
-                            <li class="hero__cats-item">bags</li>
-                            <li class="hero__cats-item">sunglasses</li>
-                            <li class="hero__cats-item">belts</li>
-                        </ul>
-                        <h1 class="hero__title">Exclusive accessories <br> for connoisseurs of style</h1>
-                        <p class="hero__text">Designed in Montreal, Bruden's Backpack embodies luxury fashion while keeping comfort and versatility</p>
-                        <button class="btn hero__btn">Shop now</button>
-                </div>
-                    <img class="hero__img" src="<?php echo get_template_directory_uri() ?>/assets/img/hero_2.png"></div></div>
-                    <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
-                        <div class="hero__content">
-                        <ul class="hero__cats">
-                            <li class="hero__cats-item">bags</li>
-                            <li class="hero__cats-item">sunglasses</li>
-                            <li class="hero__cats-item">belts</li>
-                        </ul>
-                        <h1 class="hero__title">Exclusive accessories <br> for connoisseurs of style</h1>
-                        <p class="hero__text">Designed in Montreal, Bruden's Backpack embodies luxury fashion while keeping comfort and versatility</p>
-                        <button class="btn hero__btn">Shop now</button>
-                </div>
-                    <img class="hero__img" src="<?php echo get_template_directory_uri() ?>/assets/img/hero_3.png"></div></div>
-                    </div>
+                    <?php echo wp_get_attachment_image($slide['hero_slider_img'], 'full')?>
+                    <!-- <img class="hero__img" src="<?php echo get_template_directory_uri() ?>/assets/img/hero_1.png"> -->
+                </div></div> 
+            <?php endforeach ?>
+            <?php endif ?>
                     <!-- If we need pagination -->
+                </div>
                 </div>
                 <div class="hero-swiper__pagination"></div>
               </div>
@@ -78,7 +64,7 @@ Template Name: Home page
                                 $woo_cat_name = $woo_cat->name; //category name
                                 $woo_cat_slug = $woo_cat->slug; //category slug
                             
-                                if ($woo_cat_name !== "Misc") : ?>
+                                if ($woo_cat_name !== "Misc" && $woo_cat_name !== "Deal of the week") : ?>
                                         <div class="swiper-slide category__swiper-slide">
                                             <a href="<?php get_term_link($woo_cat_id, 'product_cat') ?>'"><?php
                                                 $category_thumbnail_id = get_term_meta($woo_cat_id, 'thumbnail_id', true);
