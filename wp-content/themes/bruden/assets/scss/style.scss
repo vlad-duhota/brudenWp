@@ -874,3 +874,14 @@ section.category{
         top: -100vh;
     }
 }
+
+.woocommerce-product-gallery__wrapper a {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.onsale{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}

@@ -111,7 +111,7 @@
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.1);
 
-        ul {
+        & > ul {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             text-transform: uppercase;
             font-size: 15px;
@@ -141,6 +141,10 @@
 
         .woocommerce-Tabs-panel {
             padding-top: 15px;
+            ul{
+                padding-left: 35px;
+                list-style: circle;
+            }
         }
 
         h2 {
@@ -226,6 +230,10 @@
             margin: 15px 0;
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            ul{
+                padding-left: 35px;
+                list-style: circle;
+            }
         }
 
         .in-stock {
