@@ -511,7 +511,7 @@
         gap: $rgap $cgap;
 
         .product {
-            width: calc(33.333% - (($cgap * 2) / 3));
+            width: calc(33.333% - ((40px * 2) / 3));
             @media(max-width:992px) {
                 width: 100%;
             }
