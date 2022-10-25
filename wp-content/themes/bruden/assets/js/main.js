@@ -1,6 +1,6 @@
 const swiper = new Swiper('.hero-swiper', {
     // Optional parameters
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
   
     // If we need pagination
@@ -11,19 +11,7 @@ const swiper = new Swiper('.hero-swiper', {
 //     effect: 'fade',
 //   fadeEffect: {
 //     crossFade: true
-  
-  breakpoints: {
-    320: {
-        direction: 'horizontal',
-      },
-      992: {
-        direction: 'vertical',
-      }
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
+ 
     speed: 1000,
     autoplay: {
       delay: 6500,

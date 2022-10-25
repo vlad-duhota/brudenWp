@@ -8,6 +8,7 @@ $grey: #7F7F7F;
 
 // hero
 .hero{
+    position: relative;
     .container{
         position: relative;
     }
@@ -33,15 +34,6 @@ $grey: #7F7F7F;
     }
     &__content{
         max-width: 540px;
-        transform: translateX(-50vw);
-        opacity: 0;
-        transition: transform 1s, opacity .5s .5s;
-    }
-    .swiper-slide-active{
-        .hero__content{
-            opacity: 1;
-            transform: translateX(0);
-        }
     }
     &__cats{
         display: flex;
@@ -110,16 +102,16 @@ $grey: #7F7F7F;
   }
 
   .hero-swiper__pagination{
-    position: absolute;
-    left: -25px;
+    display: flex;
     @media(max-width:1276px){
-      position: static;
-      display: flex;
-      gap: 10px;
       margin-top: 20px;
     }
     @media(max-width:992px){
         justify-content: center;
+    }
+
+    @media(max-width:578px){
+        margin-top: -10vh;
     }
 
     .swiper-pagination-bullet{
