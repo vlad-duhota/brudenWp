@@ -66,7 +66,7 @@ Template Name: About us page
                                 $woo_cat_name = $woo_cat->name; //category name
                                 $woo_cat_slug = $woo_cat->slug; //category slug
                             
-                                if ($woo_cat_name !== "Misc") : ?>
+                                if ($woo_cat_name !== "Misc" && $woo_cat_name !== "Deal of the week") : ?>
                                         <div class="swiper-slide category__swiper-slide">
                                             <a href="<?php get_term_link($woo_cat_id, 'product_cat') ?>'"><?php
                                                 $category_thumbnail_id = get_term_meta($woo_cat_id, 'thumbnail_id', true);

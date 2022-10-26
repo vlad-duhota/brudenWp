@@ -292,7 +292,7 @@
   font-size: 22px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #DE1616;
+  color: #000;
 }
 
 .woo-main .entry-summary .cart {
@@ -504,7 +504,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 22px;
   line-height: 1;
-  color: #DE1616;
+  color: #000;
 }
 
 #yith-quick-view-modal.open .yith-wcqv-main .entry-summary .cart {
@@ -823,7 +823,7 @@
 
 .woocommerce-page .wishlist_table tr td.product-remove a {
   font-size: 32px;
-  color: #DE1616;
+  color: #000;
 }
 
 .woocommerce-page .wishlist_table tr td.product-thumbnail a {
@@ -1000,7 +1000,7 @@
 }
 
 .woocommerce-cart .shop_table .product-remove a {
-  color: #DE1616;
+  color: #000;
 }
 
 .woocommerce-cart .shop_table .product-thumbnail {

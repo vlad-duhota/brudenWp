@@ -17,15 +17,12 @@
             <?php wp_head(); ?>
         </head>
 
-<body <?php body_class(); ?> style="overflow: hidden">
+<body <?php body_class(); ?>>
     <?php
       if ( function_exists( 'wp_body_open' ) ) {
         wp_body_open();
       }
     ?>
-        <div class="preloader">
-        <img class="preloader__img" src="<?php echo get_template_directory_uri()?>/assets/img/loader.gif">
-    </div>
     <div class="wrapper">
         <header class="header">
             <div class="container">

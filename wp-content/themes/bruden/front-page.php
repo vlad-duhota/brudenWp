@@ -23,13 +23,6 @@ Template Name: Home page
                     <?php foreach($slider as $slide) : ?>
                         <div class="swiper-slide hero__swiper-slide"><div class="hero__swiper-item">     
                             <div class="hero__content">
-                            <?php if(!empty($slide['hero_slider_tags'])) : ?>
-                                <ul class="hero__cats">
-                                    <?php foreach($slide['hero_slider_tags'] as $tag) : ?>
-                                        <li class="hero__cats-item"><?php echo $tag['hero_slider_tag']?></li>
-                                    <?php endforeach ?>
-                                </ul>
-                            <?php endif ?>
                             <h1 class="hero__title"><?php echo $slide['hero_slider_title']?></h1>
                             <p class="hero__text"><?php echo $slide['hero_slider_text']?></p>
                             <a href="<?php echo get_site_url(null, 'shop') ?>" class="btn hero__btn">Shop now</a>
