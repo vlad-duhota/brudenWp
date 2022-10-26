@@ -654,6 +654,13 @@ button, input[type="submit"] {
   }
 }
 
+@media (max-width: 578px) {
+  .footer .sidebar {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .footer .sidebar h3::after {
   content: none;
 }
@@ -801,6 +808,10 @@ button, input[type="submit"] {
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.special br {
+  display: none;
 }
 
 .special .wpcf7-spinner {

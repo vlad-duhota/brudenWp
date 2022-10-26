@@ -497,6 +497,11 @@ button, input[type="submit"]{
             width: 50%;
         }
 
+        @media(max-width:578px){
+            max-width: 100%;
+            width: 100%;
+        }
+
         h3::after {
             content: none;
         }
@@ -628,6 +633,9 @@ button, input[type="submit"]{
         text-transform: capitalize;
         text-align: center;
         margin-bottom: 20px;
+    }
+    br{
+        display: none;
     }
     .wpcf7-spinner{
         position: absolute;
