@@ -31,11 +31,6 @@ Container::make('theme_options', 'Theme options')
         Field::make( 'image', 'hero_slider_img', 'Img' ),
         Field::make( 'text', 'hero_slider_title', 'Title' ),
         Field::make( 'text', 'hero_slider_text', 'Text' ),
-        Field::make( 'complex', 'hero_slider_tags', 'Tags' )
-        ->add_fields( array(
-            Field::make( 'text', 'hero_slider_tag', 'Tag' ),
-        ) )
-    ->set_max(3),
     ) )
     ->set_max(6),
     Field::make( 'separator', 'crb_separator_titles', 'Titles'  ),

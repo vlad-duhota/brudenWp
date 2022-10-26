@@ -8,9 +8,3 @@ menuBtn.addEventListener('click', function(){
     right.classList.toggle('header__right_active');
 });
 
-const preloader = document.querySelector('.preloader');
-const bodyElem = document.querySelector('body');
-setTimeout(function(){
-    preloader.classList.add('preloader_hidden');
-    bodyElem.style.overflow = 'auto';
-}, 3500)
