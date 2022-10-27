@@ -243,9 +243,17 @@ button, input[type="submit"]{
             column-gap: 3px;
     
             i {
-                font-size: 24px;
+                // font-size: 26px;
                 color: #000000;
                 font-weight: 400;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 24px;
+                    width: 24px;
+                    background: url(../img/cart.svg) center / contain no-repeat;
+                }
             }
     
             &::after {
