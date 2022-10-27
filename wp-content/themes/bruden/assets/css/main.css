@@ -104,6 +104,7 @@
 
 .hero-swiper__pagination {
   display: flex;
+  margin-top: 20px;
 }
 @media (max-width: 1276px) {
   .hero-swiper__pagination {
@@ -144,24 +145,6 @@
   height: 70vh;
   overflow: hidden;
   position: relative;
-}
-.additional .container::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  background: rgba(255, 255, 255, 0.13);
-  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.13);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.additional .container:hover::before {
-  opacity: 1;
 }
 .additional__title {
   color: #fff;
@@ -212,24 +195,6 @@
   position: relative;
   aspect-ratio: 1;
   width: 50%;
-}
-.banner__part::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  background: rgba(255, 255, 255, 0.13);
-  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.13);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.banner__part:hover::before {
-  opacity: 1;
 }
 @media (max-width: 768px) {
   .banner__part::after {
@@ -303,24 +268,6 @@
   border: 1px solid #000;
   display: flex;
   position: relative;
-}
-.fits__inner::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: calc(100% - 330px);
-  bottom: 15px;
-  background: rgba(255, 255, 255, 0.13);
-  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.13);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.fits__inner:hover::before {
-  opacity: 1;
 }
 @media (max-width: 992px) {
   .fits__inner {

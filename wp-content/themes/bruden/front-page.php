@@ -58,7 +58,7 @@ Template Name: Home page
                             
                                 if ($woo_cat_name !== "Misc" && $woo_cat_name !== "Deal of the week") : ?>
                                         <div class="swiper-slide category__swiper-slide">
-                                            <a href="<?php get_term_link($woo_cat_id, 'product_cat') ?>'"><?php
+                                            <a href="<?php echo get_term_link($woo_cat_id, 'product_cat') ?>"><?php
                                                 $category_thumbnail_id = get_term_meta($woo_cat_id, 'thumbnail_id', true);
                                                 $thumbnail_image_url = wp_get_attachment_url($category_thumbnail_id); ?>
                                                 <img src="<?php echo $thumbnail_image_url ?>'" class="category__img"/>
