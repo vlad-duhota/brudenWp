@@ -37,7 +37,7 @@ Container::make('theme_options', 'Theme options')
     Field::make( 'text', 'title_1', 'Categories title' ),
     Field::make( 'text', 'title_2', 'Deal Of The Week title' ),
     Field::make( 'text', 'title_3', 'Latest News title' ),
-    Field::make( 'text', 'title_4', 'Special Products title' ),
+    // Field::make( 'text', 'title_4', 'Special Products title' ),
     Field::make( 'separator', 'crb_separator_banner_1', 'First banner'  ),
     Field::make( 'text', 'banner_1_title', 'Banner title' )
     ->set_width(80),
