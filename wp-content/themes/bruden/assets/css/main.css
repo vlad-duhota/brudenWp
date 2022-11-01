@@ -92,7 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 68px;
+  padding-top: 65px;
   position: relative;
 }
 @media (max-width: 992px) {

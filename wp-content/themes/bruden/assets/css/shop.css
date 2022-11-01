@@ -1130,6 +1130,12 @@ form.woocommerce-checkout .button:hover {
     font-size: 12px;
   }
 }
+.woocommerce-account .woocommerce-MyAccount-content a {
+  color: #000000;
+}
+.woocommerce-account .woocommerce-MyAccount-content a:hover {
+  text-decoration: underline;
+}
 .woocommerce-account .woocommerce-form-login {
   width: 100%;
 }
@@ -1138,6 +1144,9 @@ form.woocommerce-checkout .button:hover {
 }
 .woocommerce-account .woocommerce-form-login .lost_password {
   margin-top: 10px;
+}
+.woocommerce-account .woocommerce-form-login a {
+  color: #000000;
 }
 .woocommerce-account .woocommerce-EditAccountForm,
 .woocommerce-account fieldset {

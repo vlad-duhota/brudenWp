@@ -7,7 +7,7 @@
                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/insta.svg">
                         <?php echo carbon_get_theme_option('insta_name')?>
                     </a>
-                    <p class="footer__copy-right"><span>&copy</span>2022 by Bruden Mode. Proudly created with</p>
+                    <p class="footer__copy-right"><span>&copy</span><?php the_time('Y') ?> Bruden Mode All rights reserved | Powered by <a href="http://biramedia.com" target="_blank">Biramedia.com</a></p>
                 </div>
                 <?php get_sidebar( 'foot' ); ?>
             </div>
