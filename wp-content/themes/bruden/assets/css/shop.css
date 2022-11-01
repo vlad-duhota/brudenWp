@@ -1084,6 +1084,45 @@ form.woocommerce-checkout .button:hover {
   color: #000000;
 }
 
+.woocommerce-order {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.woocommerce-order .woocommerce-notice {
+  width: 100%;
+}
+.woocommerce-order h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.woocommerce-order .woocommerce-order-overview,
+.woocommerce-order .woocommerce-order-details {
+  width: 50%;
+}
+.woocommerce-order .woocommerce-order-details table {
+  width: 100%;
+}
+.woocommerce-order .woocommerce-order-details table th,
+.woocommerce-order .woocommerce-order-details table td:first-child {
+  text-align: left;
+}
+.woocommerce-order .woocommerce-order-details table a {
+  color: #000000;
+}
+.woocommerce-order .woocommerce-order-details table a:hover {
+  text-decoration: underline;
+}
+.woocommerce-order .woocommerce-customer-details {
+  width: 100%;
+}
+.woocommerce-order .woocommerce-customer-details .addresses {
+  display: flex;
+}
+.woocommerce-order .woocommerce-customer-details .addresses > div {
+  width: 50%;
+}
+
 .woocommerce-account .woocommerce {
   display: flex;
   flex-wrap: wrap;

@@ -473,6 +473,12 @@ button, input[type=submit] {
     margin-right: auto;
   }
 }
+.footer__copy-right a {
+  color: inherit;
+}
+.footer__copy-right a:hover {
+  text-decoration: underline;
+}
 .footer__title {
   margin-bottom: 40px;
 }

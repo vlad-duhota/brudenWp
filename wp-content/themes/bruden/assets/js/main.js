@@ -102,20 +102,20 @@ const swiper5 = new Swiper('.latest-swiper', {
 );
 
 // hide title on link hover
-$('a').on('mouseenter', function () {
-  var $link = $(this);
-      title = $link.attr('title');
+// $('a').on('mouseenter', function () {
+//   var $link = $(this);
+//       title = $link.attr('title');
 
-  $link.attr('title', '').data('title', title);
+//   $link.attr('title', '').data('title', title);
 
-console.log('off', title, $link.attr('title'), $link.data());
-});
+// console.log('off', title, $link.attr('title'), $link.data());
+// });
 
-$('a').on('mouseleave', function () {
-  var $link = $(this);
-      title = $link.data('title');
+// $('a').on('mouseleave', function () {
+//   var $link = $(this);
+//       title = $link.data('title');
 
-  $link.attr('title', title).data('title', '');
+//   $link.attr('title', title).data('title', '');
 
-  console.log('on', title, $link.attr('title'), $link.data());
-});
+//   console.log('on', title, $link.attr('title'), $link.data());
+// });

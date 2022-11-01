@@ -1193,6 +1193,57 @@ form.woocommerce-checkout {
     }
 }
 
+.woocommerce-order {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    .woocommerce-notice {
+        width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .woocommerce-order-overview,
+    .woocommerce-order-details {
+        width: 50%;
+    }
+
+    .woocommerce-order-details {
+        table {
+            width: 100%;
+
+            th,
+            td:first-child {
+                text-align: left;
+            }
+
+            a {
+                color: #000000;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .woocommerce-customer-details {
+        width: 100%;
+        
+        .addresses {
+            display: flex;
+
+            & > div {
+                width: 50%;
+            }
+        }
+    }
+}
+
 .woocommerce-account {
 
     .woocommerce {
