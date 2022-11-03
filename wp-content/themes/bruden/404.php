@@ -1,14 +1,15 @@
 <?php
 /*
-Template Name: Thank page
+Template Name: 404
 */
 ?>
 
 <?php get_header(); ?>
 
-<main style="margin-top: auto; margin-bottom: auto; text-align: center;">
+<main style="margin-top: 15vh; margin-bottom: 15vh; text-align: center;">
     <div class="container">
-        <p class="page__text">Check site url</p>
+        <h1>Sorry! The link you asked is incorrect.</h1>
+        <h3 class="page__text">Check site url</h3>
     </div>
 </main>
 

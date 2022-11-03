@@ -1317,6 +1317,25 @@ form.woocommerce-checkout {
 
         a {
             color: #000000;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .woocommerce-form-register {
+
+        .form-row + p {
+            margin-top: 10px;
+        }
+
+        a {
+            color: #000000;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
