@@ -1100,6 +1100,12 @@ form.woocommerce-checkout .button:hover {
 .woocommerce-order .woocommerce-order-details {
   width: 50%;
 }
+@media (max-width: 992px) {
+  .woocommerce-order .woocommerce-order-overview,
+  .woocommerce-order .woocommerce-order-details {
+    width: 100%;
+  }
+}
 .woocommerce-order .woocommerce-order-details table {
   width: 100%;
 }

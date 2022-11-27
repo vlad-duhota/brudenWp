@@ -1210,6 +1210,9 @@ form.woocommerce-checkout {
     .woocommerce-order-overview,
     .woocommerce-order-details {
         width: 50%;
+        @media(max-width:992px) {
+            width: 100%;
+        }
     }
 
     .woocommerce-order-details {
