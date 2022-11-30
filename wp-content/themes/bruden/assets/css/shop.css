@@ -1224,3 +1224,6 @@ form.woocommerce-checkout .button:hover {
 #yith-wcwl-popup-message {
   padding: 0 !important;
 }
+#yith-wcwl-popup-message div {
+  padding: 0 15px;
+}
