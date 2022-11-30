@@ -1220,3 +1220,7 @@ form.woocommerce-checkout .button:hover {
   background: transparent;
   color: #000000;
 }
+
+#yith-wcwl-popup-message {
+  padding: 0 !important;
+}
