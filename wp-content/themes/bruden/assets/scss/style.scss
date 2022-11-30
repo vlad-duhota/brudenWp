@@ -470,7 +470,15 @@ button, input[type="submit"]{
         @media(max-width:992px){
             margin-left: auto;
             margin-right: auto;
-           }
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__title{
         margin-bottom: 40px;

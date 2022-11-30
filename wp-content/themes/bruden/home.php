@@ -52,13 +52,13 @@
             <h2 class="special__title title_dashed">Insta-gallery</h2>
             <div data-mc-src="da54c84f-049d-4c54-b03a-28fd6224fcbe#instagram"></div>
         </div>
-        <div style="height: 50px; margin-top: -50px; background: #fff; position: relative; z-index: 3;"></div>
+        <!-- <div style="height: 50px; margin-top: -50px; background: #fff; position: relative; z-index: 3;"></div> -->
     </section>
     <section class="special">
         <div class="container">
-            <h2 class="special__title title_dashed">
-                <?php echo carbon_get_theme_option('title_4')?>
-            </h2>
+            <!-- <h2 class="special__title title_dashed">
+                <?php // echo carbon_get_theme_option('title_4')?>
+            </h2> -->
             <p class="special__text">Register now to get updates on promotions </p>
             <?php echo do_shortcode('[contact-form-7 id="69" title="Email"]')?>
         </div>

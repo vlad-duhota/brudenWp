@@ -93,7 +93,7 @@ $grey: #7F7F7F;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 68px;
+    padding-top: 65px;
     position: relative;
     @media(max-width:992px){
         flex-direction: column-reverse;
@@ -492,4 +492,8 @@ $grey: #7F7F7F;
     @media(max-width:578px){
         flex-direction: column;
     }
+}
+
+.css-s9tt3p {
+    display: none !important;
 }
